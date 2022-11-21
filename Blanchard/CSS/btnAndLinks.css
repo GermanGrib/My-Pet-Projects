@@ -1,0 +1,32 @@
+.header__btn {
+  position: relative;
+  padding-bottom: 11px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--white);
+  margin-left: auto;
+}
+
+.header__btn::before {
+  position: absolute;
+  content: '';
+  background-image: url(../img/headerAndMain/arrowExit.svg);
+  width: 13px;
+  height: 13px;
+  left: -20px;
+  top: 25%;
+  background-repeat: no-repeat;
+}
+
+.main__link {
+  padding: 23px 36px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  background: var(--violet);
+  border-radius: 100px;
+  color: var(--white);
+  width: max-content;
+  margin-bottom: 30px;
+}

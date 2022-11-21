@@ -1,0 +1,11 @@
+@import url(fonts.css);
+
+@import url(normolize.css);
+
+@import url(variables.css);
+
+@import url(global.css);
+
+@import url(_headerAndMain.css);
+
+@import url(btnAndLinks.css);
