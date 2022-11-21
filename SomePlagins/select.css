@@ -1,0 +1,182 @@
+/* ===============================
+=            default-select            =
+=============================== */
+.default-select {
+  position: relative;
+  overflow: hidden;
+  width: 176px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #333;
+}
+
+.default-select:focus {
+  outline: none;
+}
+
+.default-select:last-child {
+  margin-bottom: 0;
+}
+
+.default-select.is-open {
+  overflow: visible;
+}
+
+.default-select.is-disabled .default-select__inner,
+.default-select.is-disabled .default-select__input {
+  background-color: #eaeaea;
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.default-select.is-disabled .default-select__item {
+  cursor: not-allowed;
+}
+
+.default-select [hidden] {
+  display: none !important;
+}
+
+.default-select[data-type*=select-one] {
+  cursor: pointer;
+}
+
+.default-select[data-type*=select-one] .default-select__input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  margin: 0;
+}
+
+.default-select[data-type*=select-one]::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  height: 8px;
+  width: 8px;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #666;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -5px;
+  transform: rotate(45deg);
+  pointer-events: none;
+  transition: transform .3s ease, margin-top .3s ease;
+}
+
+.default-select[data-type*=select-one].is-open::after {
+  margin-top: -2px;
+  transform: rotate(225deg);
+  border-color: var(--goldbrown);
+}
+
+.default-select__inner {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.is-focused .default-select__inner, .is-open .default-select__inner {
+  border-color: var(--goldbrown);
+}
+
+.is-open .default-select__inner {
+  border-radius: 2.5px 2.5px 0 0;
+}
+
+.default-select__list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.default-select__list--single {
+  display: inline-block;
+  width: 100%;
+}
+
+.default-select__list--single .default-select__item {
+  width: 100%;
+}
+
+.default-select__list--dropdown, .default-select__list[aria-expanded] {
+  visibility: hidden;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid transparent;
+  top: 100%;
+  margin-top: -10px;
+  padding-top: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  word-break: break-all;
+  will-change: visibility;
+}
+
+.is-active.default-select__list--dropdown, .is-active.default-select__list[aria-expanded] {
+  visibility: visible;
+}
+
+.is-open .default-select__list--dropdown, .is-open .default-select__list[aria-expanded] {
+  border-color: var(--goldbrown);
+}
+
+.default-select__list--dropdown .default-select__list, .default-select__list[aria-expanded] .default-select__list {
+  position: relative;
+  max-height: 300px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  will-change: scroll-position;
+}
+
+.default-select__list--dropdown .default-select__item, .default-select__list[aria-expanded] .default-select__item {
+  position: relative;
+  padding: 10px 15px;
+}
+
+.default-select__list--dropdown .default-select__placeholder {
+  display: none;
+}
+
+.default-select__list--dropdown .default-select__item--selectable.is-highlighted, .default-select__list[aria-expanded] .default-select__item--selectable.is-highlighted {
+  background-color: #f2f2f2;
+}
+
+.default-select__list--dropdown .default-select__item--selectable.is-highlighted::after, .default-select__list[aria-expanded] .default-select__item--selectable.is-highlighted::after {
+  opacity: 0.5;
+}
+
+.default-select__item {
+  padding: 10px 25px 10px 15px;
+  cursor: default;
+}
+
+.default-select__item--selectable {
+  cursor: pointer;
+}
+
+.default-select__item--disabled {
+  cursor: not-allowed;
+  -webkit-user-select: none;
+  user-select: none;
+  opacity: 0.5;
+}
+
+/* .default-select__placeholder {
+  opacity: 0.5;
+} */

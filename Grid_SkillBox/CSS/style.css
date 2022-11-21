@@ -1,0 +1,17 @@
+@import url(_global.css);
+
+@import url(_variables.css);
+
+@import url(_buttonsAndLinks.css);
+
+@import url(_headerAndMain.css);
+
+@import url(hamburger.css);
+
+@import url(_advantage.css);
+
+@import url(_teachers.css);
+
+@import url(_curses.css);
+
+@import url(_footer.css);

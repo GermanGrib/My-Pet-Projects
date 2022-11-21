@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>17PractWork</title>
+  <link href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" rel="stylesheet">
+  <link rel="stylesheet" href="select.css">
+  <link href="style.css" rel="stylesheet">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+  <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script defer src="https://unpkg.com/@popperjs/core@2"></script>
+  <script defer src="https://unpkg.com/tippy.js@6"></script>
+  <script defer src="inputmask/inputmask.min.js"></script>
+  <Script defer src="choices-lib.min.js"></Script>
+  <script defer src="index.js"></script>
+
+</head>
+
+<body class="flex">
+  <!-- Task 1 -->
+  <section class="category">
+    <div class="category__container">
+      <h3 class="category__title mtitle">Категории:</h3>
+      <nav class="category__nav flex">
+        <label class="check-label">
+          <input class="visually-hidden checkbox" type="checkbox">
+          <span class="visible-checkbox"></span>
+          <span class="check-text">Медведи</span>
+        </label>
+        <label class="check-label">
+          <input class="visually-hidden checkbox" type="checkbox">
+          <span class="visible-checkbox"></span>
+          <span class="check-text">Косули</span>
+        </label>
+        <label class="check-label">
+          <input class="visually-hidden checkbox" type="checkbox">
+          <span class="visible-checkbox"></span>
+          <span class="check-text">Лисы</span>
+        </label>
+        <label class="check-label">
+          <input class="visually-hidden checkbox" type="checkbox">
+          <span class="visible-checkbox"></span>
+          <span class="check-text">Волки</span>
+        </label>
+        <label class="check-label">
+          <input class="visually-hidden checkbox" type="checkbox">
+          <span class="visible-checkbox"></span>
+          <span class="check-text">Олени и лоси</span>
+        </label>
+      </nav>
+    </div>
+  </section>
+  <!-- ----------Task1 -->
+
+  <!-- Task2 -->
+  <div class="material__flex flex">
+    <section class="material">
+      <label>
+        <div class="material__container">
+          <h3 class="material__title">Материал</h3>
+          <button class="material__button btn-reset">
+            <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 0.656853L6.65686 6.31371L12.3137 0.656851" stroke="#666666"></path>
+            </svg>
+          </button>
+      </label>
+      </div>
+      <ul class="material__list list-reset">
+        <li class="material__top flex">
+          <button class="material__button-two btn-reset">
+            <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.3137 6.65674L6.65687 0.999884L1.00001 6.65674" stroke="#CCB26E"></path>
+            </svg>
+          </button>
+        </li>
+        <div class="material__bottom">
+          <li class="material__items">Древесина</li>
+          <li class="material__items">Металл</li>
+          <li class="material__items">Камень</li>
+          <li class="material__items">Пластик</li>
+          <li class="material__items">Композитный</li>
+          <li class="material__items">Гипс</li>
+        </div>
+      </ul>
+
+      <!-- -------------Task 2 -->
+    </section>
+
+    <!-- Task 2 (#2) -->
+    <section class="container__wrapp">
+      <select class="js-custom-select">
+        <option value="">Материал</option>
+        <option>Древесина</option>
+        <option>Металл</option>
+        <option>Камень</option>
+        <option>Пластик</option>
+        <option>Композитный</option>
+        <option>Гипс</option>
+      </select>
+    </section>
+  </div>
+
+  <!-- ----------------Task 2(#2) -->
+
+
+  <!-- Task 3 -->
+  <section class="map">
+    <div class="map__container">
+      <div id="map" style="width: 600px; height: 400px"></div>
+    </div>
+  </section>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script type="text/javascript">
+
+    ymaps.ready(init);
+    function init() {
+      // Создание карты. 48.872185, 2.354224 нужный адрес для точки
+      var myMap = new ymaps.Map("map", {
+        center: [48.856663, 2.351556],
+        zoom: 12,
+        controls: []
+      },
+        {
+          suppressMapOpenBlock: true,
+        }
+      );
+
+      var placemark = new ymaps.Placemark([48.872185, 2.354224], null, {
+        iconLayout: 'default#image',
+        iconImageHref: '../12_adaptive-layout-mobile/img/mapIcon.svg',
+        iconImageSize: [28, 40],
+        iconImageOffset: [-20, -20],
+      });
+
+      myMap.geoObjects.add(placemark);
+    }
+  </script>
+  <!--  ------------- Task 3 -->
+
+  <!-- Task 4 -->
+  <section class="scrollbar">
+    <div class="scrollbar__container" id="scrollbar__container" data-simplebar>
+      <p class="scrollbar__text">Сложно сказать, почему многие известные личности представлены в исключительно
+        положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены
+        соответствующими инстанциями. Мы вынуждены отталкиваться от того, что высокотехнологичная концепция
+        общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется
+        спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают
+        чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, обнародованы.
+        Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на
+        привычные вещи - безусловно открывает новые горизонты для первоочередных требований.lorem15</p>
+    </div>
+  </section>
+  <!-- --------------Task 4 -->
+
+  <!-- Task 5 -->
+  <section class="form">
+    <div class="form__container"></div>
+    <div class="form__front">
+      <form class="form__box flex" action="#" method="get">
+        <label class="form__label">
+          <input class="form__input form-control input-name" id="name" data-validate-field="name" type="text" name="Имя"
+            placeholder="Имя*">
+        </label>
+        <label class="form__label"> <input class="form__input form-control input-tel" data-validate-rules="phone"
+            type="tel" placeholder="Телефон**"></label>
+        <label class="form__label"> <input class="form__input form-control input-mail" data-validate-field="mail"
+            type="email" placeholder="E-mail*"></label>
+        <button class="form__btn btn-reset btn btn-primary">Заказать</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- ------------Task 5 -->
+
+  <!-- Task 6  -->
+  <section class="tooltip">
+    <div class="tooltip__container">
+      <p class="tooltip__text">
+        Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления
+        внешнеэкономических политик.
+        <button class="tooltip__btn btn-reset" data-tippy-content="Глава 2, страница 176">
+          <svg class="tooltip__marker" width="16" height="16" viewBox="0 0 16 16" fill="none" tabindex="1"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z"
+              fill="#none"></path>
+          </svg>
+        </button>
+      </p>
+    </div>
+
+  </section>
+  <!-- ---------Task 6 -->
+
+
+</body>
+
+</html>
