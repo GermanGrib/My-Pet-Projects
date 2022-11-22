@@ -65,3 +65,12 @@ section {
   margin: 0 auto;
   padding: 0
 }
+
+.mtitle {
+  margin: 0;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 65px;
+  color: var(--mblack);
+}
+

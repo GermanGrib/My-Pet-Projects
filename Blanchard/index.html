@@ -6,18 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link href="CSS/styles.css" rel="stylesheet">
   <link href="BlanchardFavicon.svg" rel="stylesheet">
 
-  <script src="JS/index.js" defer></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="JS/swiperSlider.js"></script>
+  <script defer src="JS/index.js"></script>
 </head>
 
 <body>
-  <div class="main__img">
+  <div class="main-box">
     <header class="header">
       <div class="header__container container flex">
         <div class="header__logo">
-          <a class="header__link" href="#" aria-label="добро пожаловать на наш сайт бланчард">
+          <a class="header__logolink" href="#" aria-label="добро пожаловать на наш сайт бланчард">
             <svg width="173" height="40" viewBox="0 0 173 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M2.78965 32.7802L0.289746 29.1348H2.09561L3.79365 31.7425L5.50518 29.1348H7.29756L4.79092 32.7802L7.42559 36.5873H5.6332L3.79365 33.7977L1.96084 36.5873H0.168457L2.78965 32.7802Z"
@@ -105,7 +108,7 @@
                 d="M162.243 21.892C165.61 21.892 167.809 20.3492 168.915 17.5568L169.243 17.6648C168.713 19.3619 168.432 20.7041 168.417 21.5989H173V0H168.463V4.39691C168.463 6.09397 168.697 7.46704 169.258 9.3338L168.947 9.45722C167.84 6.68022 165.626 5.07574 162.243 5.07574C157.566 5.07574 155.103 7.89902 155.103 13.2987V13.6844C155.103 19.0687 157.566 21.892 162.243 21.892ZM163.958 19.115C161.152 19.115 159.686 17.3408 159.686 13.8387V13.129C159.686 9.6115 161.152 7.82188 163.958 7.82188C166.889 7.82188 168.463 9.70407 168.463 13.2062V13.7616C168.463 17.2482 166.889 19.115 163.958 19.115Z"
                 fill="white"></path>
             </svg>
-          </a class="header__link" href="#" aria-label="добро пожаловать на наш сайт бланчард">
+          </a>
         </div>
         <nav class="header__nav nav">
           <ul class="nav__list list-reset flex">
@@ -117,7 +120,7 @@
             <li class="nav__items">Контакты</li>
           </ul>
         </nav>
-        <button class="header__btn btn-reset" aria-label="войти в личный кабинет">Войти</button>
+        <a class="header__link " href="#" aria-label="войти в личный кабинет">Войти</a>
       </div>
     </header>
 
@@ -125,13 +128,24 @@
       <div class="main__top">
         <div class="main__topcontainer container flex">
           <ul class="main__list list-reset flex">
-            <li class="main__items"><button class="main__btn btn-reset" aria-label="Реализм нажав на кнопку появится список и можно будет выбрать из списка художников">Реализм</button></li>
-            <li class="main__items"><button class="main__btn btn-reset" aria-label="Импрессионизм нажав на кнопку появится список и можно будет выбрать из списка художников">Импрессионизм</button></li>
-            <li class="main__items"><button class="main__btn btn-reset" aria-label="Постимпрессионизм нажав на кнопку появится список и можно будет выбрать из списка художников">Постимпрессионизм</button></li>
-            <li class="main__items"><button class="main__btn btn-reset" aria-label="Авангард нажав на кнопку появится список и можно будет выбрать из списка художников">Авангард</button></li>
-            <li class="main__items"><button class="main__btn btn-reset" aria-label="Футуризм нажав на кнопку появится список и можно будет выбрать из списка художников">Футуризм</button></li>
+            <li class="main__items"><button class="main__btn btn-reset"
+                aria-label="Реализм нажав на кнопку появится список и можно будет выбрать из списка художников">Реализм</button>
+            </li>
+            <li class="main__items"><button class="main__btn btn-reset"
+                aria-label="Импрессионизм нажав на кнопку появится список и можно будет выбрать из списка художников">Импрессионизм</button>
+            </li>
+            <li class="main__items"><button class="main__btn btn-reset"
+                aria-label="Постимпрессионизм нажав на кнопку появится список и можно будет выбрать из списка художников">Постимпрессионизм</button>
+            </li>
+            <li class="main__items"><button class="main__btn btn-reset"
+                aria-label="Авангард нажав на кнопку появится список и можно будет выбрать из списка художников">Авангард</button>
+            </li>
+            <li class="main__items"><button class="main__btn btn-reset"
+                aria-label="Футуризм нажав на кнопку появится список и можно будет выбрать из списка художников">Футуризм</button>
+            </li>
           </ul>
-          <button class="main__button btn-reset"> </button><input class="main__input" aria-label="укажите что вы хотели бы найти на нашем сайте и нажмите ввод для поиска" type="search"
+          <button class="main__button btn-reset"> </button><input class="main__input"
+            aria-label="укажите что вы хотели бы найти на нашем сайте и нажмите ввод для поиска" type="search"
             placeholder="Поиск по&nbsp;сайту">
         </div>
       </div>
@@ -145,6 +159,85 @@
       </div>
     </main>
   </div>
+
+  <section class="aboutus" id="about-us">
+    <div class="container">
+      <div class="aboutus__container">
+        <h2 class="mtitle">О нас</h2>
+        <p class="aboutus__text">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно
+          определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних
+          резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта
+          влечёт за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает,
+          что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план
+          целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов
+          и&nbsp;ресурсов.
+          В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность
+          среди
+          определённых слоёв населения, а&nbsp;значит, должны быть разоблачены.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="gallery__container container flex">
+      <div class="gallery__left flex">
+        <h2 class="gallery__title mtitle">Галерея</h2>
+        Фильтр;
+        <div class="filter__list">Живопись
+          <svg class="gallery__svg" width="12" height="7" viewBox="0 0 12 7" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 1L6 6L1 1" stroke="white"></path>
+          </svg>
+        </div>
+        <div class="gallery__inputbox">
+          <label class="gallery__label" for="check"><input class="gallery__input " type="checkbox" name="check">XlX век
+            <span></span></label>
+          <label class="gallery__label" for="check"><input class="gallery__input " type="checkbox" name="check">XX век
+            <span></span></label>
+          <label class="gallery__label" for="check"><input class="gallery__input " type="checkbox"
+              name="check">Современность <span></span></label>
+        </div>
+      </div>
+      <div class="swiper gallery__right">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <picture>
+              <img class="gallery__img" src="img/Gallery/swiper1.jpg" alt="произведение искусства торс">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <img class="gallery__img" src="img/Gallery/swiper2.jpg" alt="произведение искусства женщина с граблями">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <img class="gallery__img" src="img/Gallery/swiper3.jpg" alt="произведение искусства уборка ржи">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <img class="gallery__img" src="img/Gallery/swiper4.jpg"
+                alt="произведение искусства Иван Васильевич Клюн Супрематизм 1915">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <img class="gallery__img" src="img/Gallery/swiper5.jpg"
+                alt="произведение искусства женщина с ведрами Супрематизм Казимир Малевич">
+            </picture>
+          </div>
+          <div class="swiper-slide">
+            <picture>
+              <img class="gallery__img" src="img/Gallery/swiper6.jpg" alt="произведение искусства ">
+            </picture>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>

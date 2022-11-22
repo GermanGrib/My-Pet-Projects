@@ -1,14 +1,14 @@
-.header__btn {
+.header__link {
   position: relative;
-  padding-bottom: 11px;
   font-weight: 400;
+  padding-top: 7px;
   font-size: 18px;
   line-height: 25px;
   color: var(--white);
   margin-left: auto;
 }
 
-.header__btn::before {
+.header__link::before {
   position: absolute;
   content: '';
   background-image: url(../img/headerAndMain/arrowExit.svg);

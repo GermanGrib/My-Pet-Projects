@@ -29,11 +29,11 @@
   margin-right: 62px;
 }
 
-.main__img {
-  min-height: 800px;
+.main-box {
   background-image: url(../img/headerAndMain/mainImg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 92px;
 }
 
 .main__top {
