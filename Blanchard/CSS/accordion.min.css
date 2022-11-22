@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/**
+ * Accordion v3.3.2
+ * Lightweight and accessible accordion module created in pure Javascript
+ * https://github.com/michu2k/Accordion
+ *
+ * Copyright (c) Michał Strumpf
+ * Published under MIT License
+ */
+
+.ac {
+  box-sizing: border-box;
+  ;
+  margin-top: 10px;
+  border: none;
+  border-bottom: 1px solid var(--lightgray);
+  background-color: transparent;
+}
+
+.ac:first-child {
+  border-top: 2px solid var(--lightgray);
+}
+
+.ac .ac-header {
+  margin: 0;
+  padding: 0;
+}
+
+.ac .ac-trigger {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 32px 30px 39px 1px;
+  border: 0;
+  border-bottom: 1px solid var(--lightgray);
+  font: bold 24px Arial, sans-serif;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--mblack);
+  text-align: left;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color .25s ease;
+}
+
+.ac .ac-trigger::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-repeat: no-repeat;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z' fill='%23ECECEC'/%3E%3Cpath d='M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25Z' stroke=''/%3E%3Cpath d='M33.3333 23.3333L25 31.6667L16.6667 23.3333' stroke='black'/%3E%3C/svg%3E%0A");
+}
+
+.ac .ac-trigger:focus {
+  color: #8a8a8a;
+}
+
+.ac .ac-panel {
+  overflow: hidden;
+  transition-timing-function: ease;
+  ;
+  transition-property: height, visibility;
+}
+
+.ac .ac-panel .ac-text {
+  margin: 0;
+  padding: 25px 2px;
+  font: 15px/24px Arial, sans-serif;
+  color: #111111;
+}
+
+.ac.js-enabled .ac-panel {
+  visibility: hidden;
+}
+
+.ac.is-active .ac-panel {
+  visibility: visible;
+}
+
+.ac.is-active>.ac-header .ac-trigger::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M49 25C49 38.2548 38.2548 49 25 49C11.7452 49 1 38.2548 1 25C1 11.7452 11.7452 1 25 1C38.2548 1 49 11.7452 49 25Z' fill='%23D1A9F0' stroke='%239D5CD0' stroke-width='2'/%3E%3Cpath d='M16.6667 27.3333L25 19L33.3333 27.3333' stroke='black'/%3E%3C/svg%3E%0A");
+  width: 50px;
+  height: 50px;
+}

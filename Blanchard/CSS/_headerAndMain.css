@@ -1,3 +1,10 @@
+.main-img {
+  width: 1920px;
+  height: 800px;
+  position: absolute;
+  z-index: -1;
+}
+
 .header {
   background-color: var(--black);
 }
@@ -30,13 +37,10 @@
 }
 
 .main-box {
-  background-image: url(../img/headerAndMain/mainImg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   padding-bottom: 92px;
 }
 
-.main__top {
+.main__filtr {
   width: 100%;
   padding: 20px 0 17px;
   background: rgba(0, 0, 0, .5);
@@ -60,12 +64,13 @@
 .main__items::after {
   content: "";
   position: absolute;
-  bottom: 10%;
+  bottom: 25%;
   width: 15px;
   height: 10px;
   margin-left: 5px;
   background-image: url(../img/headerAndMain/whiteArrowDown.svg);
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .main__button {

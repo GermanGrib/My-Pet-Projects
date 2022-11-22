@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+figure {
+  margin: 0;
+}
+
 img,
 svg {
   max-width: 100%;
@@ -22,7 +26,7 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
   line-height: 32px;
-  color: var(--black);
+  color: var(--mblack);
   background: #E5E5E5;
 }
 

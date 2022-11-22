@@ -1,5 +1,7 @@
 @import url(fonts.css);
 
+@import url(_swipers.css);
+
 @import url(normolize.css);
 
 @import url(variables.css);
@@ -11,3 +13,8 @@
 @import url(btnAndLinks.css);
 
 @import url(_aboutUsAndGallery.css);
+
+@import url(_catalogue.css);
+
+@import url(_eventAndProjects.css);
+

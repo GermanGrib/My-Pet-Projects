@@ -1,7 +1,10 @@
 :root {
   --black: #000;
-  --mblacm: #333;
+  --mblack: #333;
   --gray: #666;
+  --lightgray: #cacaca;
+  --mgray: #999;
   --white: #fff;
   --violet: #9D5CD0;
+  --mviolet: #7943A4;
 }

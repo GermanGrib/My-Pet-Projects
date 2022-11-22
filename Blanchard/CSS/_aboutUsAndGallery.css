@@ -1,3 +1,5 @@
+/* Abouts us */
+
 .aboutus {
   padding-top: 80px;
   padding-bottom: 54px;
@@ -7,6 +9,8 @@
 .aboutus__container {
   max-width: 1080px;
 }
+
+/* Gallery */
 
 .gallery {
   background-image: url(../img/Gallery/backgroundImg.jpg);
@@ -24,7 +28,7 @@
   color: var(--white);
 }
 
-.gallery__left {
+.gallery__filtr {
   flex-direction: column;
   margin-right: 50px;
   color: var(--white);
@@ -100,39 +104,3 @@
   opacity: 1;
 }
 
-.swiper {
-  max-width: 1150px;
-}
-
-.swiper-slide {
-  padding-top: 75px;
-}
-
-.swiper-button-prev,
-.swiper-rtl {
-  top: 39px;
-  left: 4px;
-}
-
-.swiper-button-next,
-.swiper-rtl .swiper-button-prev {
-  top: 39px;
-  left: 104px;
-}
-
-.swiper-button-prev:after,
-.swiper-rtl {
-  content: "";
-  width: 30px;
-  height: 30px;
-  background-image: url(../img/Gallery/arrowWhiteLeft.svg);
-  background-repeat: no-repeat;
-}
-
-.swiper-button-next:after {
-  content: "";
-  width: 30px;
-  height: 30px;
-  background-image: url(../img/Gallery/arrowWhiteRight.svg);
-  background-repeat: no-repeat;
-}

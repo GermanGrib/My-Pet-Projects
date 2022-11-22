@@ -7,16 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="CSS/accordion.min.css">
   <link href="CSS/styles.css" rel="stylesheet">
-  <link href="BlanchardFavicon.svg" rel="stylesheet">
+  <link href="BlanchardFavicon.svg" rel="icon" type="image/svg+xml">
 
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script defer src="js/accordion.min.js"></script>
   <script defer src="JS/swiperSlider.js"></script>
   <script defer src="JS/index.js"></script>
 </head>
 
 <body>
   <div class="main-box">
+    <img class="main-img" src="img/headerAndMain/mainImg.jpg" alt="">
     <header class="header">
       <div class="header__container container flex">
         <div class="header__logo">
@@ -112,12 +115,12 @@
         </div>
         <nav class="header__nav nav">
           <ul class="nav__list list-reset flex">
-            <li class="nav__items">О нас</li>
-            <li class="nav__items">Галерея</li>
-            <li class="nav__items">Каталог</li>
-            <li class="nav__items">События</li>
-            <li class="nav__items">Проекты</li>
-            <li class="nav__items">Контакты</li>
+            <li class="nav__items"><a class="nav__link" href="#about-us">О нас</a></li>
+            <li class="nav__items"><a class="nav__link" href="#gallery">Галерея</a></li>
+            <li class="nav__items"><a class="nav__link" href="#catalogue">Каталог</a></li>
+            <li class="nav__items"><a class="nav__link" href="#event">События</a></li>
+            <li class="nav__items"><a class="nav__link" href="#projects">Проекты</a></li>
+            <li class="nav__items"><a class="nav__link" href="#footer">Контакты</a></li>
           </ul>
         </nav>
         <a class="header__link " href="#" aria-label="войти в личный кабинет">Войти</a>
@@ -125,7 +128,7 @@
     </header>
 
     <main class="main">
-      <div class="main__top">
+      <div class="main__filtr">
         <div class="main__topcontainer container flex">
           <ul class="main__list list-reset flex">
             <li class="main__items"><button class="main__btn btn-reset"
@@ -180,7 +183,7 @@
 
   <section class="gallery" id="gallery">
     <div class="gallery__container container flex">
-      <div class="gallery__left flex">
+      <div class="gallery__filtr flex">
         <h2 class="gallery__title mtitle">Галерея</h2>
         Фильтр;
         <div class="filter__list">Живопись
@@ -198,46 +201,316 @@
               name="check">Современность <span></span></label>
         </div>
       </div>
-      <div class="swiper gallery__right">
+      <div class="swiper gallery__swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <div class="swiper-slide gallery__slide">
             <picture>
               <img class="gallery__img" src="img/Gallery/swiper1.jpg" alt="произведение искусства торс">
             </picture>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide gallery__slide">
             <picture>
               <img class="gallery__img" src="img/Gallery/swiper2.jpg" alt="произведение искусства женщина с граблями">
             </picture>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide gallery__slide">
             <picture>
               <img class="gallery__img" src="img/Gallery/swiper3.jpg" alt="произведение искусства уборка ржи">
             </picture>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide gallery__slide">
             <picture>
               <img class="gallery__img" src="img/Gallery/swiper4.jpg"
                 alt="произведение искусства Иван Васильевич Клюн Супрематизм 1915">
             </picture>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide gallery__slide">
             <picture>
               <img class="gallery__img" src="img/Gallery/swiper5.jpg"
                 alt="произведение искусства женщина с ведрами Супрематизм Казимир Малевич">
             </picture>
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide gallery__slide">
             <picture>
               <img class="gallery__img" src="img/Gallery/swiper6.jpg" alt="произведение искусства ">
             </picture>
           </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev gallery__swiperbtnprev"></div>
+        <div class="swiper-button-next gallery__swiperbtnnext"></div>
       </div>
     </div>
   </section>
+
+  <section class="catalogue" id="catalogue">
+    <div class="container">
+      <div class="catalogue__top">
+        <h2 class="mtitle catalogue__mtitle">Каталог</h2>
+        <p class="catalogue__text">Акционеры крупнейших компаний, которые представляют собой яркий пример
+          континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы
+          этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство,
+          нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены
+          на&nbsp;независимые элементы.</p>
+      </div>
+      <div class="catalogue__bottom flex">
+        <div class="catalogue__left">
+          <img class="catalogue__img" src="img/catalogue/catalogue1.jpg"
+            alt="Поклонение волхвов Картина Доменико Гирландайо">
+          <h3 class="catalogue__stitle">Доменико Гирландайо</h3>
+          <p class="catalogue__datetext">2&nbsp;июня 1448&ndash;11 января 1494</p>
+          <p class="catalogue__text">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
+            художественной
+            династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный
+            Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов,
+            в&nbsp;которых
+            выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей
+            (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).</p>
+        </div>
+        <div class="catalogue__right">
+          <div class="accordion-container">
+            <div class="ac">
+              <h2 class="ac-header">
+                <button type="button" class="ac-trigger">C&nbsp;1400 по&nbsp;1499&nbsp;гг</button>
+              </h2>
+              <div class="ac-panel">
+                <div class="ac-text flex">
+                  <ul class="catalogue__list list-reset">
+                    <li class="catalogue__items">Бенедетто ди&nbsp;Биндо</li>
+                    <li class="catalogue__items">Бергоньоне, Амброджо</li>
+                    <li class="catalogue__items">Биссоло, Франческо</li>
+                    <li class="catalogue__items">Больтраффио, Джованни</li>
+                    <li class="catalogue__items">Бонсиньори, Франческо</li>
+                    <li class="catalogue__items">Боттичини, Рафаэлло</li>
+                    <li class="catalogue__items">Брамантино</li>
+                    <li class="catalogue__items">Бреа, Людовико</li>
+                    <li class="catalogue__items">Бьяджо д’Антонио Туччи</li>
+                  </ul>
+                  <ul class="catalogue__list list-reset">
+                    <li class="catalogue__items">Веккьетта</li>
+                    <li class="catalogue__items">Андреа Верроккьо</li>
+                    <li class="catalogue__items">Доменико Гирландайо</li>
+                    <li class="catalogue__items">Беноццо Гоццоли</li>
+                    <li class="catalogue__items">Граначчи, Франческо</li>
+                    <li class="catalogue__items">Грегорио ди Чекко</li>
+                    <li class="catalogue__items">Джованни да Удине</li>
+                    <li class="catalogue__items">Джованни ди Паоло</li>
+                    <li class="catalogue__items">Джорджоне</li>
+                  </ul>
+                  <ul class="catalogue__list list-reset">
+                    <li class="catalogue__items">Парентино, Бернардо</li>
+                    <li class="catalogue__items">Пезеллино</li>
+                    <li class="catalogue__items">Пьетро Перуджино</li>
+                    <li class="catalogue__items">Перуцци, Бальдассаре</li>
+                    <li class="catalogue__items">Пизанелло</li>
+                    <li class="catalogue__items">Пинтуриккьо</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="ac">
+              <h2 class="ac-header">
+                <button type="button" class="ac-trigger">C&nbsp;1500 по&nbsp;1599&nbsp;гг</button>
+              </h2>
+              <div class="ac-panel">
+                <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+
+            <div class="ac">
+              <h2 class="ac-header">
+                <button type="button" class="ac-trigger">C&nbsp;1600 по&nbsp;1699&nbsp;гг</button>
+              </h2>
+              <div class="ac-panel">
+                <div class="ac-text flex">
+                  <div class="ac-box">
+                    <div class="ac-box1"></div>
+                  </div>
+                  <div class="ac-rightbox">
+                    <h4 class="ac-title">Здесь пока пусто</h4>
+                    <p class="ac-textbox">А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                    </p>
+                    <a href="#" class="ac-link">В галерею</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="ac">
+              <h2 class="ac-header">
+                <button type="button" class="ac-trigger">C&nbsp;1700 по&nbsp;1799&nbsp;гг</button>
+              </h2>
+              <div class="ac-panel">
+                <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+
+            <div class="ac">
+              <h2 class="ac-header">
+                <button type="button" class="ac-trigger">C&nbsp;1800 по&nbsp;1899&nbsp;гг</button>
+              </h2>
+              <div class="ac-panel">
+                <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+
+            <div class="ac">
+              <h2 class="ac-header">
+                <button type="button" class="ac-trigger">C&nbsp;1900 по&nbsp;1999&nbsp;гг</button>
+              </h2>
+              <div class="ac-panel">
+                <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+
+            <div class="ac">
+              <h2 class="ac-header">
+                <button type="button" class="ac-trigger">C&nbsp;2000&nbsp;г</button>
+              </h2>
+              <div class="ac-panel">
+                <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="event" id="event">
+    <div class="container">
+      <h2 class="event__title mtitle">События</h2>
+      <div class="swiper event__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide event__slide">
+            <figure>
+              <picture>
+                <img class="event__img" src="img/event/event1.jpg" alt="">
+                <figcaption class="event__figcaption">Музей им. Щусева<br>с&nbsp;20&nbsp;марта
+                  по&nbsp;30&nbsp;апреля</br></figcaption>
+              </picture>
+            </figure>
+            <div class="event__textbox">
+              <h3 class="event__mtitle">Книжная гравюра в&nbsp;живом&nbsp;восприятии</h3>
+              <p class="event__text">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
+                художественной
+                династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо</p>
+              <a href="#" class="event__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="swiper-slide event__slide">
+            <figure>
+              <picture>
+                <img class="event__img" src="img/event/event2.jpg" alt="">
+                <figcaption class="event__figcaption">ММОМА
+                  <br>24&nbsp;марта 19:00</br>
+                </figcaption>
+              </picture>
+            </figure>
+            <div class="event__textbox">
+              <h3 class="event__mtitle">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.</h3>
+              <p class="event__text">Высокий уровень вовлечения представителей целевой аудитории является чётким
+                доказательством простого факта</p>
+              <a href="#" class="event__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="swiper-slide event__slide">
+            <figure>
+              <picture>
+                <img class="event__img" src="img/event/event3.jpg" alt="">
+                <figcaption class="event__figcaption">Еврейский музей
+                  <br>с&nbsp;31&nbsp;марта по&nbsp;21&nbsp;апреля</br>
+                </figcaption>
+              </picture>
+            </figure>
+            <div class="event__textbox">
+              <h3 class="event__mtitle">Выставка &laquo;Формация 2020&raquo;</h3>
+              <p class="event__text">Идейные соображения высшего порядка, а&nbsp;также современная методология
+                разработки
+                играет важную роль в&nbsp;формировании глубокомысленных рассуждений</p>
+              <a href="#" class="event__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="swiper-slide event__slide">
+            <figure>
+              <picture>
+                <img class="event__img" src="img/event/event4.jpg" alt="">
+                <figcaption class="event__figcaption">ММАМ
+                  <br>с&nbsp;8&nbsp;апреля по&nbsp;20&nbsp;мая</br>
+                </figcaption>
+              </picture>
+            </figure>
+            <div class="event__textbox">
+              <h3 class="event__mtitle">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора&raquo;</h3>
+              <p class="event__text">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
+                художественной
+                династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо</p>
+              <a href="#" class="event__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="swiper-slide event__slide">
+            <figure>
+              <picture>
+                <img class="event__img" src="img/event/event5.jpg" alt="">
+                <figcaption class="event__figcaption">Третьяковка на&nbsp;Крымском валу
+                  <br>с&nbsp;30&nbsp;марта по&nbsp;30&nbsp;апреля</br>
+                </figcaption>
+              </picture>
+            </figure>
+            <div class="event__textbox">
+              <h3 class="event__mtitle">XXIV Международная биеннале молодого искусства</h3>
+              <p class="event__text">Внезапно, реплицированные с зарубежных источников, современные исследования</p>
+              <a href="#" class="event__link">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next event__swiperbtnnext"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="projects__textbox">
+        <h2 class="projects__title mtitle">Проекты</h2>
+        <p class="projects__text">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей
+          деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые
+          государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости, из-за чего
+          возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское обеспечение
+          нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений.
+          И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены исключительно в&nbsp;разрезе
+          маркетинговых и&nbsp;финансовых предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также
+          представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+          очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершённой неузнаваемости.
+          Подробнее: blanchard-art.ru/projects</p>
+      </div>
+      <h3 class="projects__mtitle">Партнёры проектов:</h3>
+      <div class="swiper projects__swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide projects__slide slide1"></div>
+          <div class="swiper-slide projects__slide slide2"></div>
+          <div class="swiper-slide projects__slide slide3"></div>
+          <div class="swiper-slide projects__slide slide4"></div>
+          <div class="swiper-slide projects__slide slide5"></div>
+          <div class="swiper-slide projects__slide slide6"></div>
+          <div class="swiper-slide projects__slide slide7"></div>
+          <div class="swiper-slide projects__slide slide8"></div>
+          <div class="swiper-slide projects__slide slide9"></div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev projects__swiperbtnprev"></div>
+        <div class="swiper-button-next projects__swiperbtnnext"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="footer">
+    <div class="container"></div>
+  </footer>
 </body>
 
 </html>
