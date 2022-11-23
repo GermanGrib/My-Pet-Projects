@@ -1,0 +1,88 @@
+.footer {
+  background-color: var(--white);
+  padding-top: 40px;
+}
+
+.footer__cointainer {
+  padding-top: 45px;
+}
+
+.footer__form {
+  margin-bottom: 27px;
+}
+
+.footer__streetname {
+  margin-right: 97px;
+}
+
+.footer__mtitle {
+  margin-bottom: 6px;
+  margin: 0;
+  font-size: 24px;
+}
+
+.footer__text {
+  margin: 0;
+}
+
+.footer_input {
+  margin-right: 20px;
+  border: 1px solid var(--mblack);
+  border-radius: 100px;
+  padding: 15px 60px 15px 21px;
+}
+
+.footer__formbox {
+  /* margin-left: auto; */
+  padding-top: 3px;
+}
+
+.footer__callback {
+  padding-right: 25px;
+  margin-left: auto;
+}
+
+.footer__mtitlecallback {
+  margin: 0;
+  margin-top: -8px;
+  margin-bottom: 6px;
+  font-size: 24px;
+}
+
+.footer__link {
+  margin-right: 15px;
+}
+
+.footer__map {
+  width: 100%;
+}
+
+.footer__bottom {
+  background-color: var(--black);
+}
+
+.footer__logobox {
+  background-image: url(../img/headerAndMain/BlanchardLogoWhite.svg);
+  min-width: 173px;
+  min-height: 40px;
+  background-repeat: no-repeat;
+}
+
+.footer__line {
+  padding: 43px 0;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.footer__social {
+  padding-top: 5px;
+}
+
+.footer__sociallink:first-child {
+  margin-right: 16px;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}

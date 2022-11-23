@@ -11,13 +11,15 @@
 
 .header__container {
   flex-wrap: wrap;
-  padding: 30px 0 20px;
+  padding: 30px 0;
 }
 
 .header__logo {
-  min-width: 170px;
+  background-image: url(../img/headerAndMain/BlanchardLogoWhite.svg);
+  min-width: 173px;
   min-height: 40px;
   margin-right: 180px;
+  background-repeat: no-repeat;
 }
 
 .header__nav {

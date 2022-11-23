@@ -58,7 +58,7 @@
 
 .ac-box {
   margin-right: 25px;
-  border: 1px solid var(--mgray);
+  border: 2px solid var(--mgray);
   padding: 12px;
 }
 
@@ -66,6 +66,10 @@
   width: 251px;
   height: 165px;
   background-color: var(--mgray);
+}
+
+.ac-rightbox {
+  max-width: 300px;
 }
 
 .ac-title {

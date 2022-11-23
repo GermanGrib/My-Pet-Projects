@@ -30,3 +30,14 @@
   width: max-content;
   margin-bottom: 30px;
 }
+
+.footer__btn {
+  color: var(--violet);
+  border: 2px solid var(--violet);
+  border-radius: 100px;
+  background-color: transparent;
+  padding: 13px 35px 12px 24px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+}
