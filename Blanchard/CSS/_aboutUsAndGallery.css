@@ -30,7 +30,7 @@
 
 .gallery__filtr {
   flex-direction: column;
-  margin-right: 50px;
+  margin-right: 51px;
   color: var(--white);
 }
 
@@ -104,3 +104,103 @@
   opacity: 1;
 }
 
+.gallery__img {
+  width: 350px;
+  height: 350px;
+}
+
+.gallery__hover {
+  position: absolute;
+  bottom: 7%;
+  left: 7%;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, .5);
+  cursor: pointer;
+  transition: opacity .2s ease-in-out;
+}
+
+.gallery__hover:hover {
+  opacity: 1;
+}
+
+.gallery__hoversvg {
+  margin-top: 49%;
+  margin-left: 34%;
+  transform: translate(-50px, -50px);
+}
+
+.gallery__img:focus {
+  outline: 3px solid var(--mviolet);
+}
+
+.gallery__hoverbox {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  width: 900px;
+  height: 500px;
+  color: var(--mblack);
+  background: var(--white);
+}
+
+.gallery__hoverbox--active {
+  display: block;
+}
+
+.gallery__hoverbox-text {
+  padding: 121px 49px;
+}
+
+.hoverbox__painter {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
+}
+
+.hoverbox__paintname {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.hoverbox__dates {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.hoverbox__text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+@media (max-width: 1024px) {
+
+  .gallery {
+    padding-bottom: 5px;
+    background-image: url(../img/Gallery/backgroundImg@1024.jpg);
+  }
+
+  .filter__list {
+    min-width: 280px;
+    margin-bottom: 106px;
+  }
+
+  .gallery__img {
+    width: 280px;
+    height: 315px;
+
+  }
+
+  .gallery__container {
+    padding-left: 9px;
+  }
+}

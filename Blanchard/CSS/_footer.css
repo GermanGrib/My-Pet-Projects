@@ -4,7 +4,7 @@
 }
 
 .footer__cointainer {
-  padding-top: 45px;
+  padding-top: 43px;
 }
 
 .footer__form {
@@ -25,11 +25,18 @@
   margin: 0;
 }
 
-.footer_input {
+.footer__input {
   margin-right: 20px;
   border: 1px solid var(--mblack);
   border-radius: 100px;
   padding: 15px 60px 15px 21px;
+  outline: none;
+  transition: background-color .2s ease-in-out;
+}
+
+.footer__input:focus-visible,
+.footer__input:hover {
+  background-color: #ECECEC;
 }
 
 .footer__formbox {
@@ -61,11 +68,12 @@
   background-color: var(--black);
 }
 
-.footer__logobox {
+.footer__logo {
   background-image: url(../img/headerAndMain/BlanchardLogoWhite.svg);
   min-width: 173px;
   min-height: 40px;
   background-repeat: no-repeat;
+  display: inline-block;
 }
 
 .footer__line {
@@ -85,4 +93,110 @@
 
 [class*="ground-pane"] {
   filter: grayscale(1);
+}
+
+.whatsapp {
+  background-image: url(../img/footer/WhatsappIcon.svg);
+  display: inline-block;
+  width: 39px;
+  height: 39px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity .2s ease-in-out, border .2s ease-in-out;
+}
+
+.whatsapp:focus-visible,
+.whatsapp:hover {
+  opacity: 0.5;
+  outline: none;
+}
+
+.whatsapp:active {
+  border: 1px solid var(--violet);
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.telegramm {
+  background-image: url(../img/footer/TelegramIcon.svg);
+  display: inline-block;
+  width: 39px;
+  height: 39px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: opacity .2s ease-in-out, border .2s ease-in-out;
+}
+
+.telegramm:focus-visible,
+.telegramm:hover {
+  opacity: 0.5;
+  outline: none;
+}
+
+.telegramm:active {
+  border: 1px solid var(--violet);
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.footer__sociallink {
+  color: var(--lightgray);
+  transition: color .2s ease-in-out, outline .2s ease-in-out;
+}
+
+.footer__sociallink:focus-visible,
+.footer__sociallink:hover {
+  color: var(--white);
+  outline: none;
+}
+
+.footer__sociallink:active {
+  color: var(--violet);
+}
+
+
+@media (max-width: 1540px) {
+  .footer__form {
+    flex-direction: column;
+  }
+
+  .footer__streetname {
+    margin-bottom: 15px;
+  }
+
+  .footer__formbox {
+    margin-bottom: 20px;
+  }
+
+  .footer__callback {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer__formbox {
+    padding-top: 8px;
+    margin-bottom: 37px;
+  }
+
+  .footer__line {
+    padding: 43px 0;
+    padding-left: 10px;
+    padding-bottom: 29px;
+  }
+
+  .footer__logo {
+    padding-bottom: 48px;
+}
+
+  .tests {
+    min-width: 60px;
+    min-height: 60px;
+  }
+
+  .footer__social {
+    margin-right: -8px;
+  }
+
+
 }

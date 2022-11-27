@@ -2,9 +2,11 @@
   --black: #000;
   --mblack: #333;
   --gray: #666;
-  --lightgray: #cacaca;
+  --lightgray: #CACACA;
   --mgray: #999;
   --white: #fff;
   --violet: #9D5CD0;
   --mviolet: #7943A4;
+  --violethover: #C283F3;
+  --lightviolet: #D1A9F0;
 }

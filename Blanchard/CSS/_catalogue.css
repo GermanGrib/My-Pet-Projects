@@ -16,7 +16,7 @@
   margin: 0;
 }
 
-.catalogue__left {
+.catalogue__aboutpainter {
   max-width: 750px;
   width: 100%;
   margin-right: 50px;
@@ -50,10 +50,14 @@
 }
 
 .catalogue__list {
-  margin-right: 70px;
+  margin-right: 60px;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
+}
+
+.catalogue__listtwo {
+  display: flex;
 }
 
 .ac-box {
@@ -92,5 +96,98 @@
   font-size: 16px;
   line-height: 22px;
   color: var(--violet);
+  transition: background-color .2s ease-in-out, color .2s ease-in-out, border .2s ease-in-out;
 }
 
+.ac-link:focus {
+  background-color: var(--violet);
+  color: var(--white);
+  border: none;
+  outline: none;
+}
+
+.ac-link:hover {
+  border-bottom: 1px solid var(--violet);
+}
+
+.ac-link:active {
+  color: var(--mviolet);
+  border-bottom: 1px solid var(--mviolet);
+  background-color: transparent;
+}
+
+
+.catalogue__btn {
+  padding: 2px 4px;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out, border .2s ease-in-out;
+}
+
+.catalogue__btn:focus-visible {
+  background-color: var(--violet);
+  outline: none;
+  border: none;
+}
+
+.catalogue__btn:hover {
+  border-bottom: 1px solid var(--violet);
+}
+
+.catalogue__btn:active {
+  border: none;
+}
+
+.catalogue__aboutpainter {
+  display: none;
+}
+
+.catalogue__aboutpainter.catalogue__aboutpainter--active {
+  display: block;
+}
+
+@media (max-width: 1535px) {
+  .catalogue__listtwo {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .catalogue__top {
+    margin-bottom: 8px;
+  }
+
+  .catalogue__aboutpainter {
+    margin-right: 40px;
+  }
+
+  .ac .ac-header {
+    padding-left: 8px;
+  }
+
+  .catalogue__img {
+    max-height: 274px;
+  }
+
+  .ac-text {
+    align-items: center;
+  }
+
+  .ac-box {
+    padding: 8px;
+  }
+
+  .ac-box1 {
+    width: 173px;
+    height: 114px;
+  }
+
+  .ac-title {
+    margin-top: 0;
+  }
+
+  /* THAT'S FOR TIME ! DELETE WHE FINISH! ! ! ! !  */
+  .catalogue__list {
+    margin-right: 82px;
+  }
+
+  /* -----------------------THAT'S FOR TIME ! DELETE WHE FINISH! ! ! ! !  */
+}

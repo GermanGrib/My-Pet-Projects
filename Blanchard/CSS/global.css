@@ -78,3 +78,10 @@ section {
   color: var(--mblack);
 }
 
+@media (max-width: 1024px) {
+
+  .container {
+    max-width: 925px;
+    padding-left: 9px;
+  }
+}
