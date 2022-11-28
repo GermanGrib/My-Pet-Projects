@@ -54,6 +54,9 @@
 
 .swiper-button-prev {
   width: 30px;
+  bottom: 4%;
+  top: auto;
+  left: 9px;
 }
 
 .swiper-button-prev:after {
@@ -75,13 +78,16 @@
 }
 
 .swiper-pagination {
-  padding-left: 58px;
-  padding-top: 12px;
+  position: absolute;
+  left: 14%;
+  top: 23%;
   width: 92px;
 }
 
 .swiper-button-next {
-  right: 62px;
+  top: auto;
+  bottom: 5%;
+  right: 32%;
 }
 
 /* Event Slider */
@@ -108,8 +114,8 @@
 .event__swiperbtnnext,
 .swiper-rtl {
   width: 50px;
-  top: 50%;
-  right: 0;
+  top: 54%;
+  right: -1.5%;
 }
 
 .event__swiperbtnnext:after {
@@ -118,6 +124,10 @@
   width: 50px;
   height: 50px;
   background-repeat: no-repeat;
+}
+
+.event__pagination {
+  display: none;
 }
 
 /* Projects Swiper */
@@ -129,6 +139,16 @@
   height: 30px;
   background-image: url(../img/project/arrowlLeft.svg);
   background-repeat: no-repeat;
+}
+
+.projects__swiperbtnprev {
+  left: 0;
+  bottom: 10%;
+}
+
+.projects__swiperbtnnext {
+  right: 0;
+  bottom: 10%;
 }
 
 .projects__swiperbtnnext:after {
@@ -144,17 +164,64 @@
   padding-bottom: 5px;
 }
 
-
-@media (max-width:1024px) {
-  .swiper-pagination {
-    padding-left: 43px;
-  }
-
-  .swiper-button-prev {
-    left: 3px;
+@media (max-width: 1670px) {
+  .event__swiperbtnnext {
+    display: none;
   }
 
   .swiper-button-next {
-    right: 69px;
+    right: 35%;
+  }
+
+  .event__pagination.swiper-pagination {
+    display: inline-block;
+    top: auto;
+    bottom: -7%;
+    width: 150px;
+    left: 50%;
+    height: 40px;
+    transform: translateX(-45%);
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--gray);
+  }
+}
+
+
+@media (max-width:1024px) {
+  .swiper-pagination {
+    left: 11%;
+    top: 19%;
+  }
+
+  .swiper-button-prev {
+    left: 1%;
+    bottom: 8%;
+  }
+
+  .swiper-button-next {
+    bottom: 8%;
+  }
+
+  .swiper__navigation {
+    top: 4%;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .swiper__navigation {
+    top: 7%;
+  }
+
+  .projects__swiperbtnnext {
+    right: -1%;
+    bottom: 6%;
+  }
+
+  .projects__swiperbtnprev {
+    bottom: 6%;
   }
 }

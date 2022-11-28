@@ -348,8 +348,7 @@
 .header__btn {
   display: none;
   padding-bottom: 12px;
-  margin-right: -8px;
-  padding-left: 30px;
+  padding-left: 20px;
 }
 
 .form {
@@ -405,11 +404,12 @@
     display: block;
   }
 
+  /* Isn't work smoothy effect because display none... */
   .header__nav {
-    display: flex;
+    display: none;
     position: absolute;
     flex-direction: column;
-    min-width: 768px;
+    min-width: 1024px;
     min-height: 768px;
     background-color: var(--black);
     z-index: 3;
@@ -418,13 +418,14 @@
     padding-top: 96px;
     padding-left: 50px;
     opacity: 0;
-    transform: translateY(116px);
-    transition: transform 0.6s cubic-bezier(0.12, 0, 0.39, 0);
+    transform: translateX(246px);
+    transition: opacity .2s ease-in-out, transform 0.6s cubic-bezier(0.12, 0, 0.39, 0);
   }
 
   .header__nav--active {
     opacity: 1;
-    transform: translateY(0);
+    display: flex;
+    transform: translateX(0);
   }
 
   .nav__list {
@@ -451,6 +452,7 @@
     display: flex;
     animation-name: search-open;
     animation-duration: .3s;
+    z-index: 5;
   }
 
   .form.is-closed {
@@ -485,4 +487,51 @@
   .close-btn {
     background-image: url(../img/headerAndMain/closeIcon.svg);
   }
+}
+
+@media (max-width: 1024px) {
+
+  .header__btn {
+    margin-right: -8px;
+    padding-left: 30px;
+    z-index: 5;
+  }
+}
+
+@media (max-width: 960px) {
+  .header__btn {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  button.hamburger.hamburger--collapse {
+    padding: 7px 15px 15px 0;
+  }
+
+  .header__nav {
+    min-width: 768px;
+  }
+
+  .form {
+    background-color: var(--gray);
+    min-width: 768px;
+    height: 100%;
+    right: -7%;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+
+  .search-input {
+    padding-bottom: 15px;
+    width: 100%;
+  }
+
+  .search-btn {
+    background-image: url(../img/headerAndMain/searchIcon@1024.svg);
+    min-width: 29px;
+    height: 29px;
+  }
+
 }

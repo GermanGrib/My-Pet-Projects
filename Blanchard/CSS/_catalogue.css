@@ -19,7 +19,7 @@
 .catalogue__aboutpainter {
   max-width: 750px;
   width: 100%;
-  margin-right: 50px;
+  margin-right: 45px;
 }
 
 .catalogue__img {
@@ -155,16 +155,16 @@
     margin-bottom: 8px;
   }
 
+  .empty-img {
+    max-height: 274px;
+  }
+
   .catalogue__aboutpainter {
     margin-right: 40px;
   }
 
   .ac .ac-header {
     padding-left: 8px;
-  }
-
-  .catalogue__img {
-    max-height: 274px;
   }
 
   .ac-text {
@@ -190,4 +190,52 @@
   }
 
   /* -----------------------THAT'S FOR TIME ! DELETE WHE FINISH! ! ! ! !  */
+}
+
+@media (max-width: 768px) {
+
+  .catalogue__bottom {
+    flex-direction: column-reverse;
+  }
+
+  .ac .ac-header {
+    padding-left: 0;
+  }
+
+  .ac .ac-trigger {
+    padding: 44px 0px 29px 0;
+  }
+
+  .ac .ac-trigger::after {
+    right: -1%;
+    top: 54%;
+  }
+
+  .catalogue__right {
+    margin-bottom: 56px;
+  }
+
+  .catalogue__img {
+    max-width: inherit;
+    margin-bottom: 10px;
+  }
+
+  .catalogue__stitle {
+    margin-bottom: 10px;
+  }
+
+  p.catalogue__datetext {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  .empty-img {
+    max-height: 419px;
+    max-width: 668px;
+  }
+
+  .ac-box1 {
+    width: 251px;
+    height: 165px;
+}
 }

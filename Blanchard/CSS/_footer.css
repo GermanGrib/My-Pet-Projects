@@ -187,7 +187,7 @@
 
   .footer__logo {
     padding-bottom: 48px;
-}
+  }
 
   .tests {
     min-width: 60px;
@@ -198,5 +198,34 @@
     margin-right: -8px;
   }
 
+}
 
+@media (max-width: 960px) {
+  .footer__social {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__cointainer {
+    padding-top: 34px;
+  }
+
+  h3.footer__mtitle {
+    margin-bottom: 6px;
+  }
+
+  .footer__input {
+    margin-right: 0;
+    padding: 15px 105px 15px 22px;
+    margin-bottom: 8px;
+  }
+
+  .footer__input:first-child {
+    margin-right: 20px;
+  }
+
+  .footer__line {
+    padding-left: 0;
+  }
 }
