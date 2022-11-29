@@ -230,7 +230,7 @@
 
   .event__title {
     padding-left: 0px;
-}
+  }
 
   .projects__text {
     margin-bottom: 29px;
@@ -245,5 +245,48 @@
     padding-top: 0;
     padding-bottom: 0;
   }
+}
 
+@media (max-width: 320px) {
+
+  .event {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .figcaption2 {
+    margin-bottom: 8px;
+  }
+
+  .event__textbox {
+    padding: 13px 17px 15px 20px;
+  }
+
+  .event__link {
+    margin-bottom: 49px;
+  }
+
+  .projects {
+    padding-top: 51px;
+    padding-bottom: 25px;
+  }
+
+  .projects__title {
+    margin-bottom: 12px;
+  }
+
+  .projects__text {
+    margin-bottom: 51px;
+  }
+
+  .projects__mtitle {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .projects__slide {
+    width: inherit;
+    height: inherit;
+  }
 }

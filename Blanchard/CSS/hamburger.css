@@ -915,3 +915,36 @@
   bottom: 0;
   transform: rotate(-90deg)
 }
+
+@media (max-width: 768px) {
+
+  button.hamburger.hamburger--collapse {
+    padding: 7px 15px 15px 0;
+  }
+}
+
+@media (max-width: 320px) {
+  button.hamburger.hamburger--collapse {
+    padding: 0;
+    padding-top: 4px;
+  }
+
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    height: 2px;
+    width: 25px;
+  }
+
+  .hamburger--collapse .hamburger-inner:after {
+    top: -16px;
+  }
+
+  .hamburger--collapse .hamburger-inner:before {
+    width: 16px;
+    top: -8px;
+  }
+
+  .hamburger--collapse .hamburger-inner {
+    width: 10px;
+    bottom: 0;
+  }
+}

@@ -225,3 +225,14 @@
     bottom: 6%;
   }
 }
+
+@media (max-width: 320px) {
+  .projects__swiperbtnnext {
+    right: 1%;
+    bottom: 1%;
+  }
+
+  .projects__swiperbtnprev {
+    bottom: 1%;
+  }
+}

@@ -228,3 +228,48 @@
     padding-top: 100px;
   }
 }
+
+@media (max-width: 320px) {
+
+  .gallery {
+    background-image: url(../img/Gallery/backgroundImg@320.jpg);
+    padding-bottom: 40px;
+  }
+
+  .aboutus__text {
+    font-weight: 400;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .aboutus {
+    padding-top: 50px;
+    padding-bottom: 27px;
+  }
+
+  .gallery__container {
+    padding: 0;
+  }
+
+  .gallery__title {
+    margin-bottom: 12px;
+  }
+
+  .filter__list {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    min-width: 290px;
+  }
+
+  .gallery__swiper {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  .swiper__navigation {
+    top: unset;
+    bottom: 0;
+    left: 27%;
+  }
+}

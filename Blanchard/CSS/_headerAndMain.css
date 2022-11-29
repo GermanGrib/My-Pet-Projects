@@ -1,7 +1,8 @@
 .main-img {
   width: 1920px;
-  height: 800px;
+  min-width: 320px;
   position: absolute;
+  height: fit-content;
   z-index: -1;
 }
 
@@ -515,7 +516,7 @@
   }
 
   .form {
-    background-color: var(--gray);
+    background-color: var(--black);
     min-width: 768px;
     height: 100%;
     right: -7%;
@@ -532,6 +533,90 @@
     background-image: url(../img/headerAndMain/searchIcon@1024.svg);
     min-width: 29px;
     height: 29px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .main__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 320px) {
+  .form {
+    min-width: inherit;
+    padding: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .search-input {
+    padding-bottom: 0;
+  }
+
+  .header__container {
+    padding: 3px 0;
+    flex-wrap: unset;
+  }
+
+  .main-box {
+    padding-bottom: 15px;
+  }
+
+  .header__btn {
+    padding-bottom: 0;
+  }
+
+  .header__logo {
+    background-image: url(../img/headerAndMain/BlanchardLogoWhite@320.svg);
+    min-width: 97px;
+    margin-top: 9px;
+    min-height: unset;
+    height: 22px;
+  }
+
+  .header__btn {
+    padding-left: 22px;
+  }
+
+  .search__img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .header__nav {
+    min-width: 320px;
+    min-height: 600px;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .nav__items {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .main__title {
+    margin-bottom: 2px;
+  }
+
+  .main__textbox {
+    padding-top: 31px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .main__text {
+    padding: 0 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 41px;
   }
 
 }
