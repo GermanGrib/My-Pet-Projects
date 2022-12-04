@@ -1,11 +1,3 @@
-.main-img {
-  width: 1920px;
-  min-width: 320px;
-  position: absolute;
-  height: fit-content;
-  z-index: -1;
-}
-
 .header {
   background-color: var(--black);
 }
@@ -16,11 +8,17 @@
 }
 
 .header__logo {
-  background-image: url(../img/headerAndMain/BlanchardLogoWhite.svg);
   min-width: 173px;
   min-height: 40px;
   margin-right: 174px;
+  background-image: url(../img/headerAndMain/BlanchardLogoWhite.svg);
   background-repeat: no-repeat;
+}
+
+a.header__logolink {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
 }
 
 .header__nav {
@@ -45,9 +43,9 @@
 }
 
 .nav__link:focus-visible {
-  background-color: var(--mviolet);
   border: none;
   outline: none;
+  background-color: var(--mviolet);
 }
 
 .nav__link:active {
@@ -59,55 +57,42 @@
   color: var(--violethover);
 }
 
-.main-box {
-  padding-bottom: 92px;
+.hero {
+  padding-top: 0;
 }
 
-.main__filtr {
+.hero-swiper {
+  position: absolute;
+  z-index: -1;
+}
+
+.hero-img {
+  width: 100%;
+  min-width: 320px;
+  height: fit-content;
+}
+
+.hero-box {
+  padding-bottom: 58px;
+  position: relative;
+}
+
+.hero__filtr {
   width: 100%;
   padding: 20px 0 17px;
   background: rgba(0, 0, 0, .5);
 }
 
-.main__list {
+.hero__list {
   flex-wrap: wrap;
 }
 
-.testitems {
-  position: relative;
-}
-
-.main__btn {
-  padding: 2px 5px;
-  padding-right: 20px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 25px;
-  color: var(--white);
-  transition: background-color .2s ease-in-out, color .2s ease-in-out;
-}
-
-.main__btn:focus-visible {
-  background-color: var(--mviolet);
-  border: none;
-  outline: none;
-}
-
-.main__btn:hover {
-  color: var(--violethover);
-}
-
-.main__btn:active {
-  color: var(--mviolet);
-  background-color: transparent;
-}
-
-.main__items {
+.hero__items {
   position: relative;
   margin-right: 85px;
 }
 
-.main__items::after {
+.hero__items::after {
   content: "";
   position: absolute;
   bottom: 25%;
@@ -120,24 +105,24 @@
   transition: background-image .2s ease-in-out;
 }
 
-.main__items:hover::after {
+.hero_items:hover::after {
   background-image: url(../img/headerAndMain/arrowDownViolet.svg);
 }
 
-.main__items:active::after {
+.hero__items:active::after {
   background-image: url(../img/headerAndMain/arrowUpViolet.svg);
 }
 
-.main__label {
+.hero__search {
   position: relative;
   margin-left: auto;
 }
 
-.main__items--active::after {
+.hero__items--active::after {
   background-image: url(../img/headerAndMain/arrowUpViolet.svg);
 }
 
-.main__input {
+.hero__input {
   min-width: 218px;
   border: none;
   border-bottom: 1px solid var(--white);
@@ -146,22 +131,22 @@
   transition: border .2s ease-in-out;
 }
 
-.main__input:focus-visible {
+.hero__input:focus-visible {
   border-bottom: 1px solid var(--violethover);
   outline: none;
 }
 
-.main__input:hover {
+.hero__input:hover {
   border-bottom: 1px solid var(--violethover);
   outline: none;
 }
 
-.main__input:active {
+.hero__input:active {
   border-bottom: 1px solid var(--violethover);
   outline: none;
 }
 
-.main__button::before {
+.hero__button::before {
   content: "";
   position: absolute;
   top: 16%;
@@ -172,16 +157,15 @@
   background-repeat: no-repeat;
 }
 
-.main__textbox {
+.hero__textbox {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   max-width: 597px;
   padding-top: 62px;
-  padding-bottom: 32;
 }
 
-.main__title {
+.hero__title {
   margin: 0;
   font-size: 72px;
   font-weight: 700;
@@ -189,7 +173,7 @@
   color: var(--white);
 }
 
-.main__text {
+.hero__text {
   margin: 0;
   margin-bottom: 90px;
   font-size: 18px;
@@ -203,13 +187,13 @@
 }
 
 .scrollbox {
-  display: none;
   position: absolute;
+  z-index: 3;
+  top: 30px;
+  display: none;
   width: 300px;
   height: 300px;
-  background: rgba(0, 0, 0, 0.5);
-  top: 30px;
-  z-index: 3;
+  background: rgba(0, 0, 0, .5);
 }
 
 .scrollbox--active {
@@ -225,11 +209,11 @@
 }
 
 .scrollbox__link {
-  padding: 9px 14px;
-  transition: outline .2s ease-in-out;
+  display: inline-block;
   width: 100%;
   height: 100%;
-  display: inline-block;
+  padding: 9px 14px;
+  transition: outline .2s ease-in-out;
 }
 
 .scrollbox__link:focus,
@@ -238,23 +222,23 @@
 }
 
 .scrollbox__link:active {
-  background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(.jpg);
+  background: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(.jpg);
 }
 
 .scrollbox__box {
   width: 220px;
   height: 40px;
-  background-repeat: no-repeat;
-  font-weight: 600;
   font-size: 14px;
+  font-weight: 600;
   line-height: 19px;
   color: var(--white);
+  background-repeat: no-repeat;
 }
 
 .simplebar-scrollbar::before {
-  background-color: var(--white);
-  opacity: 1;
   width: 2px;
+  opacity: 1;
+  background-color: var(--white);
 }
 
 .painter1 {
@@ -337,15 +321,6 @@
   background-image: url(../img/headerAndMain/painter20.jpg);
 }
 
-.burger {
-  display: none;
-  z-index: 5;
-}
-
-.burger-btn {
-  display: none;
-}
-
 .header__btn {
   display: none;
   padding-bottom: 12px;
@@ -357,13 +332,12 @@
 }
 
 @media (max-width: 1360px) {
-  .main__filtr {
+  .hero__filtr {
     display: none;
   }
 }
 
 @media (max-width: 1260px) {
-
   .header__container {
     justify-content: space-between;
     padding-bottom: 14px;
@@ -373,31 +347,27 @@
     display: none;
   }
 
-  .burger {
-    display: block;
-  }
-
   .header__logo {
-    margin-right: 0;
-    background-image: url(../img/headerAndMain/BlanchardLogoWhite@1024.svg);
     min-width: 188px;
     min-height: 42px;
+    margin-right: 0;
+    background-image: url(../img/headerAndMain/BlanchardLogoWhite@1024.svg);
   }
 
-  .main__textbox {
-    padding-top: 105px;
+  .hero__textbox {
     max-width: 700px;
+    padding-top: 105px;
   }
 
-  .main__title {
+  .hero__title {
     margin-bottom: -11px;
   }
 
-  .main__text {
+  .hero__text {
     margin-bottom: 133px;
   }
 
-  .header__button {
+  .header__link {
     display: none;
   }
 
@@ -407,32 +377,32 @@
 
   /* Isn't work smoothy effect because display none... */
   .header__nav {
-    display: none;
     position: absolute;
+    z-index: 6;
+    top: 0;
+    display: none;
     flex-direction: column;
     min-width: 1024px;
     min-height: 768px;
-    background-color: var(--black);
-    z-index: 3;
-    top: 0;
     margin-left: -49px;
     padding-top: 96px;
     padding-left: 50px;
     opacity: 0;
+    background-color: var(--black);
+    transition: opacity .2s ease-in-out, transform .6s cubic-bezier(.12, 0, .39, 0);
     transform: translateX(246px);
-    transition: opacity .2s ease-in-out, transform 0.6s cubic-bezier(0.12, 0, 0.39, 0);
   }
 
   .header__nav--active {
-    opacity: 1;
     display: flex;
+    opacity: 1;
     transform: translateX(0);
   }
 
   .nav__list {
     display: block;
-    font-weight: 600;
     font-size: 24px;
+    font-weight: 600;
     line-height: 64px;
   }
 
@@ -450,10 +420,11 @@
   }
 
   .form.is-opened {
+    z-index: 7;
     display: flex;
+    background-color: var(--black);
     animation-name: search-open;
     animation-duration: .3s;
-    z-index: 5;
   }
 
   .form.is-closed {
@@ -461,41 +432,41 @@
     animation-duration: .3s;
   }
 
-  .search-input {
+  .form__searchinput {
     margin-right: 25px;
     padding-bottom: 3px;
-    background-color: transparent;
     border: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, .85);
+    color: var(--white);
+    background-color: transparent;
   }
 
-  .search-btn,
-  .close-btn {
+  .form__searchbtn,
+  .form__closebtn {
     width: 27px;
     height: 27px;
-    border-radius: 50%;
     border: none;
-    cursor: pointer;
+    border-radius: 50%;
     background-color: transparent;
     background-repeat: no-repeat;
+    cursor: pointer;
   }
 
-  .search-btn {
+  .form__searchbtn {
     margin-right: 10px;
     background-image: url(../img/headerAndMain/searchIcon.svg);
   }
 
-  .close-btn {
+  .form__closebtn {
     background-image: url(../img/headerAndMain/closeIcon.svg);
   }
 }
 
 @media (max-width: 1024px) {
-
   .header__btn {
+    z-index: 5;
     margin-right: -8px;
     padding-left: 30px;
-    z-index: 5;
   }
 }
 
@@ -506,7 +477,6 @@
 }
 
 @media (max-width: 768px) {
-
   button.hamburger.hamburger--collapse {
     padding: 7px 15px 15px 0;
   }
@@ -516,53 +486,57 @@
   }
 
   .form {
-    background-color: var(--black);
-    min-width: 768px;
-    height: 100%;
-    right: -7%;
+    right: inherit;
     justify-content: space-between;
-    padding: 0 50px;
-  }
-
-  .search-input {
-    padding-bottom: 15px;
     width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: var(--black);
   }
 
-  .search-btn {
-    background-image: url(../img/headerAndMain/searchIcon@1024.svg);
+  .form__searchinput {
+    width: 100%;
+    margin-right: 0;
+    padding-bottom: 15px;
+  }
+
+  .form__closebtn {
     min-width: 29px;
     height: 29px;
+    margin-right: 8px;
+    background-image: url(../img/headerAndMain/closeIcon@768.svg);
   }
 
+  .form__searchbtn {
+    min-width: 29px;
+    height: 29px;
+    background-image: url(../img/headerAndMain/searchIcon@1024.svg);
+  }
 }
 
 @media (max-width: 576px) {
-  .main__title {
-    font-weight: 700;
+  .hero__title {
     font-size: 32px;
+    font-weight: 700;
     line-height: 44px;
   }
 }
 
 @media (max-width: 320px) {
-  .form {
-    min-width: inherit;
-    padding: 0;
-    right: 0;
-    width: 100%;
-  }
-
-  .search-input {
+  .form__searchinput {
     padding-bottom: 0;
   }
 
   .header__container {
-    padding: 3px 0;
     flex-wrap: unset;
+    padding: 3px 0;
   }
 
-  .main-box {
+.hero {
+  padding: 0;
+}
+
+  .hero-box {
     padding-bottom: 15px;
   }
 
@@ -571,11 +545,11 @@
   }
 
   .header__logo {
-    background-image: url(../img/headerAndMain/BlanchardLogoWhite@320.svg);
     min-width: 97px;
-    margin-top: 9px;
-    min-height: unset;
     height: 22px;
+    min-height: unset;
+    margin-top: 9px;
+    background-image: url(../img/headerAndMain/BlanchardLogoWhite@320.svg);
   }
 
   .header__btn {
@@ -595,28 +569,27 @@
   }
 
   .nav__items {
-    font-weight: 600;
     font-size: 16px;
+    font-weight: 600;
     line-height: 32px;
   }
 
-  .main__title {
+  .hero__title {
     margin-bottom: 2px;
   }
 
-  .main__textbox {
+  .hero__textbox {
+    align-items: center;
     padding-top: 31px;
     text-align: center;
-    align-items: center;
   }
 
-  .main__text {
-    padding: 0 20px;
+  .hero__text {
     margin-bottom: 0;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
     margin-bottom: 41px;
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
   }
-
 }

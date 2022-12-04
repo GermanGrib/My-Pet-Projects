@@ -107,3 +107,12 @@ const swiperProjects = new Swiper('.projects__swiper', {
   },
 
 });
+
+const swiperHero = new Swiper('.hero-swiper', {
+  // Optional parameters
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  }
+
+});

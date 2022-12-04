@@ -1,6 +1,6 @@
-@import url(global.css);
-
 @import url(fonts.css);
+
+@import url(global.css);
 
 @import url(_swipers.css);
 
@@ -8,7 +8,7 @@
 
 @import url(variables.css);
 
-@import url(_headerAndMain.css);
+@import url(_headerAndHero.css);
 
 @import url(btnAndLinks.css);
 

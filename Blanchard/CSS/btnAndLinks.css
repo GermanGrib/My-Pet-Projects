@@ -1,121 +1,173 @@
-.header__button {
+.header__link,
+.nav__button {
   position: relative;
-  font-weight: 400;
+  margin-left: auto;
   padding: 7px 2px 2px 25px;
-  transition: background-color .2s ease-in-out, color .2s ease-in-out;
   font-size: 18px;
+  font-weight: 400;
   line-height: 25px;
   color: var(--white);
-  margin-left: auto;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
-.header__button:focus-visible {
-  background-color: var(--mviolet);
+.header__link:focus-visible,
+.nav__button:focus-visible {
   border: none;
   outline: none;
+  background-color: var(--mviolet);
 }
 
-.header__button:hover {
+.header__link:hover,
+.nav__button:hover {
   color: var(--violethover);
 }
 
-.header__button:active {
+.header__link:active,
+.nav__button:active {
   color: var(--mviolet);
   background-color: transparent;
 }
 
-.header__button::before {
+.header__link::before,
+.nav__button::before {
+  content: "";
   position: absolute;
-  content: '';
-  background-image: url(../img/headerAndMain/arrowExit.svg);
-  width: 13px;
-  color: var(--white);
-  height: 13px;
-  left: 7px;
   top: 33%;
+  left: 7px;
+  width: 13px;
+  height: 13px;
+  color: var(--white);
+  background-image: url(../img/headerAndMain/arrowExit.svg);
   background-repeat: no-repeat;
   transition: background-image .2s ease-in-out;
 }
 
-.header__button:hover::before {
+.header__link:hover::before,
+.nav__button:hover::before {
   background-image: url(../img/headerAndMain/arrowVioletHover.svg);
 }
 
-.header__button:active::before {
+.header__link:active::before .nav__button:active::before {
   background-image: url(../img/headerAndMain/arrowViolet.svg);
 }
 
-.main__link {
-  padding: 23px 36px;
-  font-weight: 700;
+.hero__btn {
+  padding: 2px 5px;
+  padding-right: 20px;
   font-size: 18px;
+  font-weight: 400;
   line-height: 25px;
-  background: var(--violet);
-  border-radius: 100px;
   color: var(--white);
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.hero__btn:focus-visible {
+  border: none;
+  outline: none;
+  background-color: var(--mviolet);
+}
+
+.hero__btn:hover {
+  color: var(--violethover);
+}
+
+.hero__btn:active {
+  color: var(--mviolet);
+  background-color: transparent;
+}
+
+.hero__link {
   width: max-content;
   margin-bottom: 30px;
+  padding: 23px 36px;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  color: var(--white);
+  background: var(--violet);
   transition: outline .2s ease-in-out, background-color .2s ease-in-out;
 }
 
-.main__link:focus {
+.hero__link:focus {
+  border: none;
   outline: 2px solid var(--violethover);
   outline-offset: 4px;
-  border: none;
 }
 
-.main__link:hover {
-  outline: 3px solid var(--lightviolet);
+.hero__link:hover {
   border: none;
+  outline: 3px solid var(--lightviolet);
 }
 
-.main__link:active {
-  outline: 3px solid var(--lightviolet);
+.hero__link:active {
   border: none;
-  background-color: var(--mviolet);
+  outline: 3px solid var(--lightviolet);
   outline-offset: 0;
+  background-color: var(--mviolet);
 }
 
 .footer__btn {
-  color: var(--violet);
+  padding: 13px 35px 12px 24px;
   border: 2px solid var(--violet);
   border-radius: 100px;
-  background-color: transparent;
-  padding: 13px 35px 12px 24px;
-  font-weight: 700;
   font-size: 18px;
+  font-weight: 700;
   line-height: 25px;
+  color: var(--violet);
+  background-color: transparent;
   cursor: pointer;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out, outline .2s ease-in-out;
+}
+
+.footer__btn:focus-visible {
+  outline: 2px solid var(--lightviolet);
+  outline-offset: 3px;
+}
+
+.footer__btn:hover {
+  color: var(--white);
+  background-color: var(--violet);
+}
+
+.footer__btn:active {
+  color: var(--white);
+  outline: 3px solid #d1a9f0;
+  background-color: var(--mviolet);
+}
+
+.burger-btn {
+  display: none;
 }
 
 @media (max-width: 1260px) {
   .burger-btn {
-    display: block;
-    margin-left: 0;
     position: absolute;
     bottom: 6.5%;
-    padding: 16px 94px 16px 103px;
     left: 8%;
+    display: block;
+    margin-left: 0;
+    padding: 16px 94px 16px 103px;
     border: 2px solid var(--violet);
     border-radius: 100px;
   }
 
-  .header__button::before {
-    left: 34%;
+  .nav__button::before {
     top: 37%;
+    left: 34%;
   }
 
-  .main__link {
+  .hero__link {
     margin-bottom: 22px;
   }
 }
 
 @media (max-width: 320px) {
-  .main__link {
-    padding: 12px 19px;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 16px;
+  .hero__link {
     margin-bottom: 30px;
+    padding: 12px 19px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
   }
 }

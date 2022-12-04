@@ -1,23 +1,24 @@
 .footer {
-  background-color: var(--white);
   padding-top: 40px;
+  background-color: var(--white);
 }
 
 .footer__cointainer {
   padding-top: 43px;
 }
 
-.footer__form {
+.footer__formbox {
   margin-bottom: 27px;
 }
 
 .footer__streetname {
+  max-width: 240px;
   margin-right: 97px;
 }
 
 .footer__mtitle {
-  margin-bottom: 6px;
   margin: 0;
+  margin-bottom: 1px;
   font-size: 24px;
 }
 
@@ -27,26 +28,26 @@
 
 .footer__input {
   margin-right: 20px;
+  padding: 15px 60px 15px 21px;
   border: 1px solid var(--mblack);
   border-radius: 100px;
-  padding: 15px 60px 15px 21px;
   outline: none;
   transition: background-color .2s ease-in-out;
 }
 
 .footer__input:focus-visible,
 .footer__input:hover {
-  background-color: #ECECEC;
+  background-color: #ececec;
 }
 
-.footer__formbox {
-  /* margin-left: auto; */
+.footer__form {
   padding-top: 3px;
 }
 
 .footer__callback {
-  padding-right: 25px;
+  max-width: 276px;
   margin-left: auto;
+  padding-right: 25px;
 }
 
 .footer__mtitlecallback {
@@ -70,18 +71,18 @@
 }
 
 .footer__logo {
-  background-image: url(../img/headerAndMain/BlanchardLogoWhite.svg);
+  display: inline-block;
   min-width: 173px;
   min-height: 40px;
+  background-image: url(../img/headerAndMain/BlanchardLogoWhite.svg);
   background-repeat: no-repeat;
-  display: inline-block;
 }
 
 .footer__line {
-  padding: 43px 0;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
-  align-items: center;
+  padding: 43px 0;
 }
 
 .footer__social {
@@ -97,10 +98,10 @@
 }
 
 .whatsapp {
-  background-image: url(../img/footer/WhatsappIcon.svg);
   display: inline-block;
   width: 39px;
   height: 39px;
+  background-image: url(../img/footer/WhatsappIcon.svg);
   background-repeat: no-repeat;
   background-position: center;
   transition: opacity .2s ease-in-out, border .2s ease-in-out;
@@ -108,21 +109,21 @@
 
 .whatsapp:focus-visible,
 .whatsapp:hover {
-  opacity: 0.5;
+  opacity: .5;
   outline: none;
 }
 
 .whatsapp:active {
   border: 1px solid var(--violet);
-  opacity: 1;
   border-radius: 50%;
+  opacity: 1;
 }
 
 .telegramm {
-  background-image: url(../img/footer/TelegramIcon.svg);
   display: inline-block;
   width: 39px;
   height: 39px;
+  background-image: url(../img/footer/TelegramIcon.svg);
   background-repeat: no-repeat;
   background-position: center;
   transition: opacity .2s ease-in-out, border .2s ease-in-out;
@@ -130,14 +131,14 @@
 
 .telegramm:focus-visible,
 .telegramm:hover {
-  opacity: 0.5;
+  opacity: .5;
   outline: none;
 }
 
 .telegramm:active {
   border: 1px solid var(--violet);
-  opacity: 1;
   border-radius: 50%;
+  opacity: 1;
 }
 
 .footer__sociallink {
@@ -155,9 +156,8 @@
   color: var(--violet);
 }
 
-
 @media (max-width: 1540px) {
-  .footer__form {
+  .footer__formbox {
     flex-direction: column;
   }
 
@@ -165,7 +165,7 @@
     margin-bottom: 15px;
   }
 
-  .footer__formbox {
+  .footer__form {
     margin-bottom: 20px;
   }
 
@@ -175,22 +175,22 @@
 }
 
 @media (max-width: 1024px) {
-  .footer__formbox {
-    padding-top: 8px;
+  .footer__form {
     margin-bottom: 37px;
+    padding-top: 8px;
   }
 
   .footer__line {
     padding: 43px 0;
-    padding-left: 10px;
     padding-bottom: 29px;
+    padding-left: 10px;
   }
 
   .footer__logo {
     padding-bottom: 48px;
   }
 
-  .tests {
+  .footer__svg {
     min-width: 60px;
     min-height: 60px;
   }
@@ -198,7 +198,6 @@
   .footer__social {
     margin-right: -8px;
   }
-
 }
 
 @media (max-width: 960px) {
@@ -218,12 +217,12 @@
 
   .footer__input {
     margin-right: 0;
-    padding: 15px 105px 15px 22px;
     margin-bottom: 8px;
+    padding: 15px 105px 15px 22px;
   }
 
   .footer__input:first-child {
-    margin-right: 20px;
+    margin-right: 14px;
   }
 
   .footer__line {
@@ -241,10 +240,10 @@
   }
 
   .footer__mtitle {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 25px;
     margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
   }
 
   .footer__streetname {
@@ -253,15 +252,15 @@
   }
 
   .footer__input {
-    padding: 10px 76px 10px 23px;
     margin-bottom: 18px;
+    padding: 10px 76px 10px 23px;
   }
 
   .footer__text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
     margin-bottom: 13px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
   }
 
   .footer__input:first-child {
@@ -270,8 +269,8 @@
 
   .footer__btn {
     padding: 13px 35px 9px 33px;
-    font-weight: 700;
     font-size: 12px;
+    font-weight: 700;
     line-height: 16px;
   }
 
@@ -280,28 +279,28 @@
   }
 
   .footer__mtitlecallback {
-    font-weight: 400;
     font-size: 18px;
+    font-weight: 400;
     line-height: 32px;
   }
 
-  .footer__formbox {
+  .footer__form {
     margin-bottom: 28px;
   }
 
   .whatsapp {
-    background-image: url(../img/footer/WhatsappIcon@320.svg);
     width: 50px;
     height: 50px;
+    background-image: url(../img/footer/WhatsappIcon@320.svg);
   }
 
   .telegramm {
-    background-image: url(../img/footer/TelegramIcon@320.svg);
     width: 50px;
     height: 50px;
+    background-image: url(../img/footer/TelegramIcon@320.svg);
   }
 
-  .footer__form {
+  .footer__formbox {
     margin-bottom: 13px;
   }
 
@@ -315,15 +314,15 @@
     padding-bottom: 0;
   }
 
-  .tests {
+  .footer__svg {
     min-width: 50px;
     min-height: 50px;
   }
 
   .footer__logo {
-    background-image: url(../img/headerAndMain/BlanchardLogoWhite@320.svg);
     min-width: 97px;
     padding-bottom: 0;
+    background-image: url(../img/headerAndMain/BlanchardLogoWhite@320.svg);
   }
 
   .footer__social {

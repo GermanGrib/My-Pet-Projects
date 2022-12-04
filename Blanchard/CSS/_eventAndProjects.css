@@ -8,8 +8,8 @@
 
 .event__figcaption {
   margin: 0;
-  font-weight: 600;
   font-size: 12px;
+  font-weight: 600;
   line-height: 16px;
   color: var(--mgray);
 }
@@ -22,46 +22,46 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  text-align: left;
-  padding: 12px 57px 15px 45px;
   min-height: 373px;
+  padding: 12px 57px 15px 45px;
+  text-align: left;
 }
 
 .event__mtitle {
   margin: 0;
   margin-bottom: 10px;
-  font-weight: 600;
   font-size: 24px;
+  font-weight: 600;
   line-height: 33px;
   color: var(--mblack);
 }
 
 .event__text {
   margin: 0;
-  color: var(--mblack);
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 32px;
+  color: var(--mblack);
 }
 
 .event__link {
-  padding: 2px 5px;
   position: absolute;
-  color: var(--violet);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
   bottom: 0;
-  border-bottom: 1px solid var(--violet);
-  transition: background-color .2s ease-in-out, color .2s ease-in-out, border .2s ease-in-out;
   margin-bottom: 38px;
+  padding: 2px 5px;
+  border-bottom: 1px solid var(--violet);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: var(--violet);
+  transition: background-color .2s ease-in-out, color .2s ease-in-out, border .2s ease-in-out;
 }
 
 .event__link:focus {
-  background-color: var(--mviolet);
   color: var(--white);
   text-decoration: underline var(--white);
   outline: none;
+  background-color: var(--mviolet);
 }
 
 .event__link:hover {
@@ -69,8 +69,8 @@
 }
 
 .event__link:active {
-  color: var(--mblack);
   border-bottom: 1px solid var(--mblack);
+  color: var(--mblack);
 }
 
 /* Projects */
@@ -89,8 +89,8 @@
 .projects__mtitle {
   margin: 0;
   margin-bottom: 15px;
-  font-weight: 600;
   font-size: 24px;
+  font-weight: 600;
   line-height: 32px;
 }
 
@@ -100,16 +100,16 @@
 }
 
 .projects__link {
-  color: var(--violet);
   padding: 2px 5px;
+  color: var(--violet);
   transition: background-color .2s ease-in-out, color .2s ease-in-out, border .2s ease-in-out;
 }
 
 .projects__link:focus {
-  background-color: var(--violet);
-  color: var(--white);
   border: none;
+  color: var(--white);
   outline: none;
+  background-color: var(--violet);
 }
 
 .projects__link:hover {
@@ -117,33 +117,35 @@
 }
 
 .projects__link:active {
-  color: var(--mviolet);
   border-bottom: 1px solid var(--mviolet);
+  color: var(--mviolet);
   background-color: transparent;
 }
 
-
 .projects__img {
+  opacity: .3;
+
   filter: grayscale(1);
-  opacity: 0.3;
 }
 
 .projects__img:hover {
-  filter: grayscale(0);
   opacity: 1;
+
+  filter: grayscale(0);
 }
 
 .projects__img:active {
-  filter: grayscale(0);
   opacity: 1;
+
+  filter: grayscale(0);
 }
 
-
 .projects__tooltip {
-  cursor: pointer;
-  fill: var(--white);
   outline: none;
+  cursor: pointer;
   transition: fill .2s ease-in-out, color .2s ease-in-out;
+
+  fill: var(--white);
 }
 
 .projects__tooltip:focus,
@@ -152,10 +154,10 @@
 }
 
 .projects__tooltip:active {
-  fill: var(--violet);
   color: var(--white);
-}
 
+  fill: var(--violet);
+}
 
 .swiper__link {
   display: inline-block;
@@ -170,7 +172,6 @@
   outline: 1px solid var(--violet);
 }
 
-
 @media (max-width: 1215px) {
   .event__textbox {
     min-height: 453px;
@@ -182,7 +183,6 @@
 }
 
 @media (max-width: 1024px) {
-
   .event {
     padding-bottom: 60px;
   }
@@ -213,14 +213,13 @@
   }
 
   .event__figcaption {
-    margin-left: auto;
     margin-bottom: 0;
+    margin-left: auto;
   }
 
   .figcaption2 {
     margin-bottom: 4px;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -229,7 +228,7 @@
   }
 
   .event__title {
-    padding-left: 0px;
+    padding-left: 0;
   }
 
   .projects__text {
@@ -237,8 +236,8 @@
   }
 
   .swiper.projects__swiper.swiper-initialized.swiper-horizontal.swiper-pointer-events {
-    padding-left: 54px;
     padding-right: 47px;
+    padding-left: 54px;
   }
 
   .projects__swiper {
@@ -248,7 +247,6 @@
 }
 
 @media (max-width: 320px) {
-
   .event {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -280,8 +278,8 @@
   }
 
   .projects__mtitle {
-    font-weight: 600;
     font-size: 18px;
+    font-weight: 600;
     line-height: 32px;
   }
 

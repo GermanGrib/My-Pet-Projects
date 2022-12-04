@@ -1,5 +1,6 @@
 new Accordion('.accordion-container');
 
+// Yandex Map
 type = "text/javascript" >
   ymaps.ready(init);
 
@@ -25,19 +26,22 @@ function init() {
     iconLayout: 'default#image',
     iconImageHref: './img/mapMarker.svg',
     iconImageSize: [20, 20],
+    balloonContentHeader: 'Однажды',
+    balloonContentBody: 'В студеную зимнюю пору',
   });
 
   myMap.geoObjects.add(myPlacemark);
+  myPlacemark.baloon.open();
 }
 
 
 // dropdowns
-const dropdownButtons = document.querySelectorAll('.main__btn');
+const dropdownButtons = document.querySelectorAll('.hero__btn');
 const boxes = document.querySelectorAll('.scrollbox');
 
 document.addEventListener('click', function (event) {
   dropdownButtons.forEach(function (element) {
-    element.classList.remove('main__btn--active');
+    element.classList.remove('hero__btn--active');
   });
   boxes.forEach(function (element) {
     element.classList.remove('scrollbox--active');
@@ -45,8 +49,8 @@ document.addEventListener('click', function (event) {
 
   const targetClassList = [...event.target.classList];
 
-  if (targetClassList.includes('main__btn')) {
-    event.target.classList.toggle('main__btn--active');
+  if (targetClassList.includes('hero__btn')) {
+    event.target.classList.toggle('hero__btn--active');
     event.target.nextElementSibling.classList.toggle('scrollbox--active');
   }
 })
@@ -66,29 +70,21 @@ hamburger.addEventListener("click", function () {
 });
 
 // gallery
+const galleryCards = document.querySelectorAll('.gallery__popuphover');
+const galleryPopups = document.querySelectorAll('.gallery__popup');
 
-// let tabHoverGallery = document.querySelector('.gallery__hover');
-// let tabHoverBox = document.querySelector('.gallery__hoverbox');
+galleryCards.forEach(function (element) {
+  element.addEventListener('click', function (e) {
+    const path = e.currentTarget.dataset.path;
 
-// tabHoverGallery.addEventListener('click', () {
-//   tabHoverBox.classList.toggle('gallery__hoverbox--active')
-// })
+    galleryCards.forEach(function (btn) { btn.classList.remove('gallery__popup--active') });
+    e.currentTarget.classList.add('gallery__hover--active');
 
-// document.addEventListener('click', function (event) {
-//   tabHoverGallery.forEach(function (element) {
-//     element.classList.remove('gallery__hoverbox--active')
-//   }),
-//     tabHoverBox.forEach(function (element) {
-//       element.classList.remove('gallery__hover--active')
-//     }),
+    galleryPopups.forEach(function (item) { item.classList.remove('gallery__popup--active') });
+    document.querySelector(`[data-target="${path}"]`).classList.add('gallery__popup--active');
+  })
+})
 
-//     const targetClassLists = [...event.target.classList];
-
-//   if (targetClassLists.includes('gallery__hover')) {
-//     event.target.classList.toggle('gallery__hoverbox--active');
-//   }
-
-// })
 
 
 // Catalogue
@@ -119,19 +115,20 @@ tippy(tooltipBtnTab, {
 
 // Smooth Scroll
 
-// document.querySelectorAll('.js-scroll-link').forEach(link => {
-//   link.addEventListener('click', function (e) {
-//     e.preventDefault();
+document.querySelectorAll('.js-scroll-link').forEach(function(link) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
 
-//     const href = this.getAttribute('href').substring(1);
-//     const scrollTarget = document.getElementById(href);
-//     const elementPosition = scrollTarget.getBoundingClientRect().top;
+    const href = this.getAttribute('href').substring(1);
+    const scrollTarget = document.getElementById(href);
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
 
-//     window.scrollBy({
-//       top: elementPosition,
-//       behavior: 'smooth'
-//     });
-//   });
+    window.scrollBy({
+      top: elementPosition,
+      behavior: 'smooth'
+    });
+  });
+});
 
 
 // Search Form
@@ -160,15 +157,16 @@ function setSearch(params) {
     this.disabled = true;
 
     if (
-      !search.classList.contains(params.activeClass) &&
-      !search.classList.contains(params.hiddenClass)
+      !search.classList.contains(params.activeClass)
     ) {
+      search.classList.remove(params.hiddenClass);
       search.classList.add(params.activeClass);
     }
   });
 
   closeBtn.addEventListener('click', function () {
     openBtn.disabled = false;
+    search.classList.remove(params.activeClass);
     search.classList.add(params.hiddenClass);
   });
 
@@ -187,3 +185,52 @@ setSearch({
   activeClass: "is-opened", // класс открытого состояния
   hiddenClass: "is-closed" // класс закрывающегося состояния (удаляется сразу после закрытия)
 });
+
+
+// Input Mask
+const phoneElement = document.querySelector(".input-tel");
+
+const im = new Inputmask("+7(999) 999-99-99");
+im.mask(phoneElement);
+
+const validation = new window.JustValidate('.footer__formbox', {
+  errorFieldCssClass: 'is-invalid',
+  errorFieldStyle: {
+    border: '1px solid #FF5C00',
+  },
+  errorLabelCssClass: 'is-label-invalid',
+  errorLabelStyle: {
+    color: '#FF5C00',
+  },
+  focusInvalidField: true,
+  lockForm: true,
+});
+
+validation
+  .addField('.input-name', [
+    {
+      rule: 'minLength',
+      value: 3,
+      errorMessage: 'Имя должно содержать хотя бы 3 буквы'
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Имя не может содержать более 30 символов'
+    },
+    {
+      rule: 'required',
+      errorMessage: 'Вы не ввели имя'
+    }
+  ])
+
+  .addField('.input-tel', [
+    {
+      validator: () => {
+        const phone = phoneElement.inputmask.unmaskedvalue();
+        const result = Number(phone) && phone.length === 10;
+        return result === 0 ? false : result;
+      },
+      errorMessage: 'Вы не ввели телефон',
+    }
+  ]);

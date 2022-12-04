@@ -3,9 +3,9 @@
 }
 
 .catalogue__top {
-  padding-top: 40px;
-  margin-bottom: 40px;
   max-width: 1080px;
+  margin-bottom: 40px;
+  padding-top: 40px;
 }
 
 .catalogue__mtitle {
@@ -17,29 +17,30 @@
 }
 
 .catalogue__aboutpainter {
-  max-width: 750px;
   width: 100%;
+  max-width: 750px;
   margin-right: 45px;
 }
 
 .catalogue__img {
+  width: fit-content;
+  height: fit-content;
   margin-bottom: 20px;
 }
 
 .catalogue__stitle {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 33px;
   margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 33px;
 }
 
 .catalogue__datetext {
-  font-weight: 400;
   font-size: 12px;
+  font-weight: 400;
   line-height: 16px;
   color: var(--mgray);
 }
-
 
 .catalogue__right {
   width: 100%;
@@ -50,10 +51,19 @@
 }
 
 .catalogue__list {
-  margin-right: 60px;
-  font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   font-size: 16px;
+  font-weight: 400;
   line-height: 32px;
+  text-align: left;
+}
+
+.catalogue__items {
+  width: 31%;
+  text-align: left;
+  word-break: break-all;
 }
 
 .catalogue__listtwo {
@@ -62,8 +72,8 @@
 
 .ac-box {
   margin-right: 25px;
-  border: 2px solid var(--mgray);
   padding: 12px;
+  border: 2px solid var(--mgray);
 }
 
 .ac-box1 {
@@ -77,33 +87,33 @@
 }
 
 .ac-title {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
   margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
 }
 
 .ac-textbox {
   margin: 0;
   margin-bottom: 5px;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 22px;
 }
 
 .ac-link {
-  font-weight: 600;
   font-size: 16px;
+  font-weight: 600;
   line-height: 22px;
   color: var(--violet);
   transition: background-color .2s ease-in-out, color .2s ease-in-out, border .2s ease-in-out;
 }
 
 .ac-link:focus {
-  background-color: var(--violet);
-  color: var(--white);
   border: none;
+  color: var(--white);
   outline: none;
+  background-color: var(--violet);
 }
 
 .ac-link:hover {
@@ -111,11 +121,10 @@
 }
 
 .ac-link:active {
-  color: var(--mviolet);
   border-bottom: 1px solid var(--mviolet);
+  color: var(--mviolet);
   background-color: transparent;
 }
-
 
 .catalogue__btn {
   padding: 2px 4px;
@@ -123,9 +132,9 @@
 }
 
 .catalogue__btn:focus-visible {
-  background-color: var(--violet);
-  outline: none;
   border: none;
+  outline: none;
+  background-color: var(--violet);
 }
 
 .catalogue__btn:hover {
@@ -152,7 +161,7 @@
 
 @media (max-width: 1024px) {
   .catalogue__top {
-    margin-bottom: 8px;
+    margin-bottom: 40px;
   }
 
   .empty-img {
@@ -180,22 +189,27 @@
     margin-top: 0;
   }
 
-  /* THAT'S FOR TIME ! DELETE WHE FINISH! ! ! ! !  */
-  .catalogue__list {
-    margin-right: 82px;
+  .catalogue__items {
+    width: 50%;
   }
 
-  /* -----------------------THAT'S FOR TIME ! DELETE WHE FINISH! ! ! ! !  */
 }
 
 @media (max-width: 768px) {
-
   .catalogue__bottom {
     flex-direction: column-reverse;
   }
 
   .catalogue__right {
-    margin-bottom: 56px;
+    margin-bottom: 59px;
+  }
+
+  .catalogue__top {
+    margin-bottom: 10px;
+  }
+
+  .catalogue__items {
+    width: 33%;
   }
 
   .catalogue__img {
@@ -212,8 +226,8 @@
   }
 
   .empty-img {
-    max-height: 419px;
     max-width: 100%;
+    max-height: 419px;
   }
 
   .ac-box1 {
@@ -225,6 +239,10 @@
 @media (max-width: 320px) {
   .catalogue__top {
     padding-top: 0;
+  }
+
+  .catalogue__items {
+    width: 100%;
   }
 
   .catalogue {
@@ -240,7 +258,7 @@
   }
 
   .catalogue__right {
-    margin-bottom: 51px;
+    margin-bottom: 53px;
   }
 
   .catalogue__stitle {
@@ -249,5 +267,24 @@
 
   p.catalogue__datetext {
     margin-bottom: 13px;
+  }
+
+  .empty-img {
+    max-height: 181px;
+  }
+
+  .ac-box1 {
+    width: 79px;
+    height: 118px;
+  }
+
+  .ac-text.flex {
+    flex-direction: unset;
+  }
+
+  .ac-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
   }
 }

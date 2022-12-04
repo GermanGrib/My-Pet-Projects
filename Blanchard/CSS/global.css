@@ -31,7 +31,7 @@ body {
   font-size: 16px;
   line-height: 32px;
   color: var(--mblack);
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 .list-reset {
@@ -71,19 +71,20 @@ section {
   position: relative;
   max-width: 1602px;
   margin: 0 auto;
-  padding: 0
+  padding: 0;
 }
 
 .mtitle {
   margin: 0;
-  font-weight: 400;
   font-size: 48px;
+  font-weight: 400;
   line-height: 65px;
   color: var(--mblack);
+
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 1024px) {
-
   .container {
     max-width: 925px;
     padding-left: 9px;
@@ -99,7 +100,7 @@ section {
 
 @media (max-width: 576px) {
   body {
-    min-width: 320px
+    min-width: 320px;
   }
 }
 
@@ -109,8 +110,8 @@ section {
   }
 
   .mtitle {
-    font-weight: 400;
     font-size: 28px;
+    font-weight: 400;
     line-height: 38px;
   }
 
