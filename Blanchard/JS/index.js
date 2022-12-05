@@ -31,7 +31,7 @@ function init() {
   });
 
   myMap.geoObjects.add(myPlacemark);
-  myPlacemark.baloon.open();
+  // myPlacemark.baloon.open();
 }
 
 
@@ -115,7 +115,7 @@ tippy(tooltipBtnTab, {
 
 // Smooth Scroll
 
-document.querySelectorAll('.js-scroll-link').forEach(function(link) {
+document.querySelectorAll('.js-scroll-link').forEach(function (link) {
   link.addEventListener('click', function (e) {
     e.preventDefault();
 

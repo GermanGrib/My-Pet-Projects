@@ -520,6 +520,18 @@ a.header__logolink {
     font-weight: 700;
     line-height: 44px;
   }
+
+  .hero-box {
+    padding-bottom: 0;
+  }
+
+  .hero__textbox {
+    padding-top: 20px;
+  }
+
+  .hero__text {
+    margin-bottom: 50px;
+  }
 }
 
 @media (max-width: 320px) {
