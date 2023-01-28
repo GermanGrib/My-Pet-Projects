@@ -22,16 +22,16 @@ function init() {
     }
   );
 
-  var myPlacemark = new ymaps.Placemark([55.758468, 37.601088], {}, {
+  var myPlacemark = new ymaps.Placemark([55.758468, 37.601088], {
+    balloonContentHeader: 'Леонтьевский пер., 5, стр. 1',
+    balloonContentBody: 'Москва, Россия, 125009',
+  }, {
     iconLayout: 'default#image',
     iconImageHref: './img/mapMarker.svg',
     iconImageSize: [20, 20],
-    balloonContentHeader: 'Однажды',
-    balloonContentBody: 'В студеную зимнюю пору',
   });
 
   myMap.geoObjects.add(myPlacemark);
-  // myPlacemark.baloon.open();
 }
 
 
@@ -53,13 +53,32 @@ document.addEventListener('click', function (event) {
     event.target.classList.toggle('hero__btn--active');
     event.target.nextElementSibling.classList.toggle('scrollbox--active');
   }
+
+  let headerNav = document.querySelector('.header__nav')
+  let hamburger = document.querySelector('.hamburger')
+
+  if (!headerNav.contains(event.target) && !hamburger.contains(event.target)) {
+    headerNav.classList.remove('header__nav--active')
+    hamburger.classList.remove('is-active')
+  }
+
+  if (event.target.classList.contains('nav__link')) {
+    headerNav.classList.remove('header__nav--active')
+    hamburger.classList.remove('is-active')
+  }
+
+  if (hamburger.classList.contains('is-active')) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'auto'
+  }
 })
 
 
 // Hamburger
 
 // Look for .hamburger
-var hamburger = document.querySelector(".hamburger");
+let hamburger = document.querySelector(".hamburger");
 let headerNavigation = document.querySelector('.header__nav')
 // On click
 hamburger.addEventListener("click", function () {
@@ -67,7 +86,14 @@ hamburger.addEventListener("click", function () {
   hamburger.classList.toggle("is-active");
   // Do something else, like open/close menu
   headerNavigation.classList.toggle('header__nav--active')
+
+  if (hamburger.classList.contains('is-active')) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'auto'
+  }
 });
+
 
 // gallery
 const galleryCards = document.querySelectorAll('.gallery__popuphover');
