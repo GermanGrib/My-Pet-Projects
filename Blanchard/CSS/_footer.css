@@ -175,6 +175,10 @@
 }
 
 @media (max-width: 1024px) {
+.footer__cointainer {
+  padding-right: 4px;
+}
+
   .footer__form {
     margin-bottom: 37px;
     padding-top: 8px;

@@ -84,10 +84,17 @@ section {
   overflow-wrap: anywhere;
 }
 
+@media (max-width: 1650px) {
+  .container {
+padding: 0 50px;
+  }
+}
+
 @media (max-width: 1024px) {
   .container {
     max-width: 925px;
     padding-left: 9px;
+    padding-right: 9px;
   }
 }
 
@@ -95,6 +102,12 @@ section {
   .container {
     max-width: 668px;
     padding-left: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding-left: 20px;
   }
 }
 
@@ -107,6 +120,7 @@ section {
 @media (max-width: 320px) {
   .container {
     max-width: 290px;
+    padding-left: 0;
   }
 
   .mtitle {

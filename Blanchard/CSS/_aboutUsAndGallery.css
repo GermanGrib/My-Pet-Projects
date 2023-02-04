@@ -289,10 +289,20 @@
   }
 }
 
+@media (max-width: 720px) {
+  .container {
+    padding-left: 20px;
+  }
+}
+
 @media (max-width: 320px) {
   .gallery {
     padding-bottom: 40px;
     background-image: url(../img/Gallery/backgroundImg@320.jpg);
+  }
+
+  .container {
+    padding-left: 0;
   }
 
   .aboutus__text {
@@ -306,7 +316,7 @@
     flex-direction: column;
     width: 290px;
     height: 600px;
-    bottom: 0 ;
+    bottom: 0;
     top: -50%;
   }
 

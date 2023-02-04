@@ -259,6 +259,10 @@
     display: none;
   }
 
+  .catalogue__img {
+    margin-bottom: 15px;
+  }
+
   .catalogue__mtitle {
     margin-bottom: 12px;
   }
