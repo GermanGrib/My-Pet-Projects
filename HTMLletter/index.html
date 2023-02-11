@@ -1,430 +1,387 @@
 <!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//RU" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>HTML Template</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      width: 100% !important;
-      -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-      margin: 0;
-      padding: 0;
-      line-height: 100%;
-      color: #515151
-    }
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>HTML Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style type="text/css">
+		body {
+			width: 100% !important;
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+			margin: 0;
+			padding: 0;
+			line-height: 100%;
+		}
 
-    [style*="Open Sans"] {
-      font-family: 'Open Sans', arial, sans-serif !important;
-    }
+		[style*="Arial"] {font-family: 'Arial', arial, sans-serif !important;}
 
-    img {
-      outline: none;
-      text-decoration: none;
-      border: none;
-      -ms-interpolation-mode: bicubic;
-      max-width: 100% !important;
-      margin: 0;
-      padding: 0;
-      display: block;
-    }
+		img {
+			outline: none;
+			text-decoration: none;
+			border:none;
+			-ms-interpolation-mode: bicubic;
+			max-width: 100%!important;
+			margin: 0;
+			padding: 0;
+			display: block;
+		}
+    
+		table td {
+			border-collapse: collapse;
+		}
+    
+		table {
+			border-collapse: collapse;
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
 
-    table td {
-      border-collapse: collapse;
-    }
+		.logo-wrapper {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
 
-    table {
-      border-collapse: collapse;
-      mso-table-lspace: 0pt;
-      mso-table-rspace: 0pt;
-    }
+		.text-item {
+			padding-top: 30px;
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-bottom: 25px;
+		}
 
-    .center {
-      padding-top: 30px;
-      padding-bottom: 28px;
-    }
+		.text-item__title {
+			margin: 0;
+			margin-bottom: 12px;
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 24px;
+			color: #515151;
+		}
 
-    .logo {
-      margin-bottom: 28px;
-    }
+		.text-item__descr {
+			margin: 0;
+			margin-bottom: 12px;
+			font-size: 12px;
+			line-height: 24px;
+			color: #515151;
+		}
 
-    .hero {
-      width: 600px;
-    }
+		.painters {
+			padding-top: 20px;
+			padding-bottom: 6px;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
 
-    .center__triumph {
-      padding: 0;
-    }
+		.painters__item td {
+			color: #ffffff;
+			padding-bottom: 21px;
+		}
 
-    .title {
-      font-weight: 700;
-      text-align: left;
-      margin-top: 0;
-      margin-bottom: 13px;
-      font-size: 20px;
-      line-height: 24px;
-    }
+		.painters__title {
+			margin: 0;
+			margin-bottom: 20px;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 24px;
+			color: #ffffff;
+		}
 
-    .hero__text {
-      margin-bottom: 0;
-      margin-top: 0;
-      font-weight: 400;
-      text-align: left;
-      font-size: 13px;
-      line-height: 24px;
-    }
+		.painters__img {
+			margin-bottom: 21px;
+		}
 
-    .table-480 {
-      width: 520px;
-    }
+		.painters__subtitle {
+			margin: 0;
+			font-size: 12px;
+			line-height: 24px;
+		}
 
-    .painters__title {
-      margin: 0;
-      margin-bottom: 21px;
-      text-align: left;
-      color: #fff;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-    }
+		.painters__descr {
+			margin: 0;
+			font-size: 12px;
+			line-height: 18px;
+		}
 
-    .painters__name {
-      margin: 0;
-      color: #fff;
-      text-align: left;
-      font-weight: 700;
-      font-size: 12px;
-      line-height: 24px;
-    }
+		.more {
+			padding-top: 29px;
+			padding-bottom: 6px;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
 
-    .painters__img {
-      margin-bottom: 21px;
-    }
+		.more__item {
+			vertical-align: top;
+		}
 
-    .painters__about {
-      font-weight: 400;
-      margin: 0;
-      margin-bottom: 21px;
-      color: #fff;
-      font-size: 12px;
-      line-height: 18px;
-      text-align: left;
-    }
+		.more__title {
+			margin: 0;
+			margin-bottom: 10px;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 24px;
+			color: #515151;
+		}
 
-    .painters__about:not(:last-child) {
-      margin-bottom: 0;
-    }
+		.more__item img {
+			margin-bottom: 11px;
+		}
 
-    .advantages__title {
-      padding-left: 40px;
-      margin: 0;
-      margin-bottom: 9px;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
+		.more__descr {
+			margin: 0;
+			font-size: 12px;
+			line-height: 18px;
+			color: #515151;
+		}
 
-    .paintres__box {
-      display: flex;
-    }
+		.link-td {
+			height: 45px;
+			background:#9D5CD0;
+			border-radius: 48px;
+		}
 
-    .painters__cardsbox {
-      padding-top: 17px;
-      padding-bottom: 5px;
-    }
+		.more-td {
+			padding-top: 26px;
+			padding-bottom: 32px;
+		}
 
-    .painters__cardtext {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 18px;
-      margin: 0;
-      color: #515151;
-    }
+		.link-td a {
+			color: #ffffff;
+			text-decoration: none;
+			font-family: Arial;
+			font-weight: bold;
+			font-size: 14px;
+			height: 45px;
+			line-height: 45px;
+			display: block;
+		}
 
-    .painters__svg {
-      margin-bottom: 5px;
-    }
+		.footer {
+			padding-top: 27px;
+			padding-bottom: 8px;
+		}
 
-    .td-140:not(:last-child) {
-      margin-right: 45px;
-    }
+		.footer__copy {
+			margin: 0;
+			padding-top: 5px;
+			font-weight: normal;
+			font-size: 12px;
+			line-height: 24px;
+			color: #757575;
+		}
 
-    .learnmore__btn {
-      text-align: center;
-    }
+		.footer-2 {
+			font-weight: normal;
+			font-size: 10px;
+			color: #757575;
+			padding-top: 2px;
+			padding-bottom: 2px;
+		}
 
-    .painters__learnmore {
-      padding: 22px 35px;
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 0%;
-      color: #fff;
-      background-color: #9D5CD0;
-      border-radius: 48px;
-      text-decoration: none;
-    }
+		.footer-2 a {
+			color: #9D5CD0;
+		}
 
-    .social__img {
-      display: inline-block;
-      width: 35px;
-      height: 35px;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+		@media (max-width: 640px) {
+			.table-600 {
+				width: 280px !important;
+			}
 
-    .social__img:not(:last-child) {
-      margin-right: 20px;
-    }
+			.more__item {
+				padding-bottom: 20px;
+				display: block !important;
+			}
 
-    .social__vk {
-      background-image: url(./assets/svg/vk.svg);
-    }
+			.more__item br {
+				display: none;
+			}
+			
+			.hero-img {
+				display: none !important;
+			}
 
-    .social__inst {
-      background-image: url(./assets/svg/instagram.svg);
-    }
-
-    .social__fb {
-      background-image: url(./assets/svg/fb.svg);
-    }
-
-    .social__text {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 24px;
-      color: #757575;
-    }
-
-    .social__box {
-      padding-bottom: 15px;
-    }
-
-    .footer__text {
-      margin: 0;
-      font-weight: 400;
-      font-size: 10px;
-      line-height: 24px;
-      color: #757575;
-    }
-
-    .btm__link {
-      color: #9D5CD0;
-    }
-
-    @media (max-width:350px) {
-      .table-600 {
-        width: 280px !important;
-      }
-
-      .table-480 {
-        width: 245px !important;
-      }
-    }
-  </style>
+		  .hero-img-mobile {
+			display: block !important;
+		  }
+		}
+	</style>
 </head>
 
 <body style="margin: 0; padding: 0;">
-  <div style="font-size:0px;font-color:#ffffff;opacity:0;visibility:hidden;width:0;height:0;display:none;">Blanchard
-  </div>
-
-  <table class="table-600" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff" align="center">
-    <tr>
-      <td>
-        <table class="top table-600" cellpadding="0" cellspacing="0" width="600" bgcolor="#000000">
-          <tr>
-            <td align="center" class="center">
-              <table width="480" class="table-480" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td class="logo" align="center">
-                    <img align="center" src="./assets/svg/Лого.svg" alt="logo">
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-        <table class="top table-600" cellpadding="0" cellspacing="0" width="600" bgcolor="#000000">
-          <tr class="hero-test">
-            <td class="hero">
-              <img src="https://avatars.mds.yandex.net/get-images-cbir/1075445/eqG7MND6qrha2cpeEVzqNw8262/ocr"
-                alt="lake">
-            </td>
-          </tr>
-        </table>
-        <table class="table-600" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff" align="center">
-          <tr>
-            <td align="center" class="center">
-              <table width="480" class="table-480" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td align="center" class="center center__triumph">
-                    <h1 class="title" style="font-family: 'Open Sans', arial, sans-serif;">Торжество импрессионизма</h1>
-                    <p class="hero__text">Опыт говорит нам, что семантический разбор внешних противодействий требует
-                      анализа
-                      новых принципов формирования материально-технической и&nbsp;кадровой базы. <br> <br> Задача
-                      организации,
-                      в&nbsp;особенности&nbsp;же внедрение современных методик, в&nbsp;своём классическом представлении,
-                      допускает внедрение глубокомысленных рассуждений. Есть над чем задуматься: элементы политического
-                      процесса преданы социально-демократической анафеме! Но&nbsp;интерактивные прототипы заблокированы
-                      в&nbsp;рамках своих собственных рациональных&nbsp;ограничений. Сторонники тоталитаризма
-                      в&nbsp;науке
-                      ограничены исключительно образом мышления.</p>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-        <table class="top table-600" cellpadding="0" cellspacing="0" width="600" bgcolor="#000000">
-          <tr>
-            <td align="center" class="center painters__cardsbox">
-              <table width="480" class="table-480" cellpadding="0" cellspacing="0">
-                <tr>
-                  <td class="painers__card" align="center">
-                    <h2 class="painters__title" style="font-family: 'Open Sans', arial, sans-serif;">Представленные
-                      художники</h2>
-                    <img class="painters__img" align="center"
-                      src="https://avatars.mds.yandex.net/get-images-cbir/1782197/RbfJ61N4FyJmzQGPoNcRZg8908/ocr"
-                      alt="Pol Gogen">
-                    <h3 class="painters__name" style="font-family: 'Open Sans', arial, sans-serif;">Поль Гоген</h3>
-                    <p class="painters__about" style="font-family: 'Open Sans', arial, sans-serif;">Прежде всего,
-                      разбавленное изрядной долей эмпатии, рациональное мышление
-                      в&nbsp;значительной степени обусловливает важность укрепления моральных ценностей.</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="painers__card" align="center">
-                    <img class="painters__img" align="center"
-                      src="https://avatars.mds.yandex.net/get-images-cbir/6963950/bY7A_whdtci9LalKD296yg8934/ocr"
-                      alt="Pol Gogen">
-                    <h3 class="painters__name" style="font-family: 'Open Sans', arial, sans-serif;">Огюст Ренуар</h3>
-                    <p class="painters__about" style="font-family: 'Open Sans', arial, sans-serif;">А&nbsp;также
-                      сделанные на&nbsp;базе интернет-аналитики выводы освещают
-                      чрезвычайно интересные особенности картины в&nbsp;целом.</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="painers__card" align="center">
-                    <img class="painters__img" align="center"
-                      src="https://yandex-images.clstorage.net/i9MGe6385/b81803uY/6XE7r7jq4Eihm7rWq0uj-uqAIcGrHwRcbkTH5wJlpwb8-rtvMdOBPNSR4MoaL3RzoTGWKX-JMtQeEO-OW2PZiYmiSPrdDlNpYs-50g_qFn5bRPFySA1WH8lW1JTU50W2KDrL_3AnMSlXUjRZTorzJ6anM7xYexCm_UeveqhReamaoTmKTj4AmsHpmeW5PBC7ivYA4vntZiyKJoT2xdS1dqjYui4B4ZDbh4Oxac57AaSnV2AMWbvgxq6UzZiZobg5WCF6KP7cINtxGFu0mA0xqDrGAvE43sZPG8bHRLYEVdSJu4kOc-GxqOUg03muOvPl17cBnms6UbQtR45IeiFLiItQGuk8rZKpc6lZ9stuAepZJmKA2I23Hwpmtzc0xte12Hp6jIIDQnjHo-NpjClDZgbVUMzpG5E27feMWZuxe8ubEkjrvr1y6zDYWDWbPdKK-zazwatexC5rxKen1kVGBJgYqw4SIWEpVeNyiY_Y4IelFnIOGjnDhr11ThlLgUm6CNNbmb1vc1iBGLn1qR9SKErF4wN6badN-NV2twR15Mb4iMkfc8PgWMcz0xpu-eHHZvRAPAmaUGdvVVwbmSDKK7lBmro8XiEr8shpV1oMAhmbx5MB2FzVH1hFZac3hFUG-VhaHYDBglpUE5EKLGkyldalA4z5agKFzhROqsgz2koIQArarMyyy5Pby_abPYOK-tego2mdVN-a9UV1FlUGJShIeh2w8TKa5wEgeX6osdYGx1PvGBuSNg82PFmI06nai5NoCjy9QciD29imiQ1zWCkH0GD6zObOqfe392XHV-VZaUjsAODTKEchQTlee1M31uRBn4rqMKb-5aw5WlBJK8jBGxtuXJL4QchJ9CjOAUh6tAIi2bwUrXsm1Ddm1_TFiYhrTbFRkuiEYRBrLVlzhFcFExzp-9Pmv0QdSRuBy_s5EnrZDx7wuKL7yAaY31FaWVQiEUtcJa0bBWX3djeVE"
-                      alt="Pol Gogen">
-                    <h3 class="painters__name" style="font-family: 'Open Sans', arial, sans-serif;">Клод Моне</h3>
-                    <p class="painters__about" style="font-family: 'Open Sans', arial, sans-serif;">Современная
-                      методология разработки однозначно фиксирует необходимость
-                      системы массового участия.</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="painers__card" align="center">
-                    <img class="painters__img" align="center"
-                      src="https://avatars.mds.yandex.net/get-images-cbir/2432622/QK9KNYxArSBADMGPbHkxzg8998/ocr"
-                      alt="Pol Gogen">
-                    <h3 class="painters__name" style="font-family: 'Open Sans', arial, sans-serif;">Эдуард Мане</h3>
-                    <p class="painters__about" style="font-family: 'Open Sans', arial, sans-serif;">Но
-                      социально-экономическое развитие является качественно новой ступенью
-                      вывода текущих активов.</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="painers__card" align="center">
-                    <img class="painters__img" align="center"
-                      src="https://avatars.mds.yandex.net/get-images-cbir/8392567/hh3Yl2WihIvsmT_8cEezEg9018/ocr"
-                      alt="Pol Gogen">
-                    <h3 class="painters__name" style="font-family: 'Open Sans', arial, sans-serif;">Винсент Ван Гог</h3>
-                    <p class="painters__about" style="font-family: 'Open Sans', arial, sans-serif;">Повседневная
-                      практика показывает, что разбавленное изрядной долей
-                      эмпатии, рациональное мышление требует анализа поставленных обществом задач.</p>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-        <table class="top table-600" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff">
-          <tr>
-            <td align="center" class="center">
-              <h2 class="advantages__title" style="font-family: 'Open Sans', arial, sans-serif;">И это ещё не всё!</h2>
-              <table width="480" class="table-480 " cellpadding="0" cellspacing="0">
-                <tr>
-                  <td class="painers__card paintres__box" align="center">
-                    <table class="td-140" cellpadding="0" cellspacing="0">
-                      <tr>
-                        <td>
-                          <img class="painters__svg" src="./assets/svg/checkSquare.svg" alt="checkSquare">
-                          <p class="painters__cardtext" style="font-family: 'Open Sans', arial, sans-serif;">Уникальные
-                            подборки работ с&nbsp;авторскими рецензиями</p>
-                        </td>
-                      </tr>
-                    </table>
-                    <table class="td-140">
-                      <tr>
-                        <td>
-                          <img class="painters__svg" src="./assets/svg/calendar.svg" alt="calendar">
-                          <p class="painters__cardtext" style="font-family: 'Open Sans', arial, sans-serif;">Возможность
-                            настроить нашу рассылку под свой личный вкус</p>
-                        </td>
-                      </tr>
-                    </table>
-                    <table class="td-140">
-                      <tr>
-                        <td>
-                          <img class="painters__svg" src="./assets/svg/arrowUpCircle.svg" alt="checkSquare">
-                          <p class="painters__cardtext" style="font-family: 'Open Sans', arial, sans-serif;">У вас есть
-                            пожелания и предложения? Напишите нам в ответ на это
-                            письмо!</p>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-        <table class="top table-600" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff">
-          <tr>
-            <td class="learnmore__btn" align="center">
-              <a class="painters__learnmore" href="#" style="font-family: 'Open Sans', arial, sans-serif;">Узнать
-                все подробности</a>
-            </td>
-          </tr>
-        </table>
-        <table class="top table-600" cellpadding="0" cellspacing="0" width="600" bgcolor="#000000">
-          <tr>
-            <td align="center" class="center social__box">
-              <table width="480" class="table-480 " cellpadding="0" cellspacing="0">
-                <tr>
-                  <td class="painers__card" align="center">
-                    <a href="#" class="social__img social__vk"></a>
-                    <a href="#" class="social__img social__inst"></a>
-                    <a href="#" class="social__img social__fb"></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="painers__card" align="center">
-                    <span class="social__text " style="font-family: 'Open Sans', arial, sans-serif;">Blanchard © 2020 /
-                      Все права защищены</span>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-        <table class="bottom-600" cellpadding="0" cellspacing="0" width="600" bgcolor="#ffffff">
-          <tr>
-            <td align="center" class="bott__box">
-              <p class="footer__text" style="font-family: 'Open Sans', arial, sans-serif;">Вы можете так же <a
-                  class="btm__link" href="#" style="font-family: 'Open Sans', arial, sans-serif;"> отписаться от
-                  рассылки</a></p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+	<div style="font-size:0px;font-color:#ffffff;opacity:0;visibility:hidden;width:0;height:0;display:none;">Тестовое письмо</div>
+	<table cellpadding="0" cellspacing="0" width="100%" bgcolor="#ededed">
+		<tr>
+			<td align="center">
+				<table cellpadding="0" cellspacing="0" class="table-600" width="600" bgcolor="#000000">
+					<tr>
+						<td align="center" class="logo-wrapper">
+							<img src="https://milkyway24.github.io/test.github.io/img-mail/logo.png" alt="Логотип Бланчард" />
+						</td>
+					</tr>
+					<tr>
+						<td align="center">
+							<img class="hero-img" src="https://milkyway24.github.io/test.github.io/img-mail/cover.jpg" alt="Обложка Бланчард" />
+							<span class="hero-img-mobile" style="display: none">
+								<img  width="280" height="300" style="color: #eeeeee;"
+								src="https://milkyway24.github.io/test.github.io/img-mail/mobile-hero.jpg"
+								alt="Картина изображающая пруд, заросший кувшинками, в окружении раскидистых ив" />
+							</span>
+						</td>
+					</tr>
+					<tr>
+						<td class="text-item" bgcolor="#ffffff" style="font-family: Arial, Helvetica, sans-serif;">
+							<h3 class="text-item__title">Торжество импрессионизма</h3>
+							<p class="text-item__descr">
+								Опыт говорит нам, что семантический разбор внешних противодействий требует анализа новых принципов формирования
+								материально-технической и кадровой базы.
+							</p>
+							<p class="text-item__descr">
+								Задача организации, в особенности же внедрение современных методик, в своём классическом представлении,
+								допускает внедрение глубокомысленных рассуждений. Есть над чем задуматься: элементы политического процесса
+								преданы социально-демократической анафеме! Но интерактивные прототипы заблокированы в рамках своих собственных
+								рациональных ограничений. Сторонники тоталитаризма в науке ограничены исключительно образом мышления.
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="painters" style="font-family: Arial, Helvetica, sans-serif;">
+							<h2 class="painters__title">Представленные художники</h2>
+							<table cellpadding="0" cellspacing="0" class="painters__item">
+								<tr>
+									<td style="font-family: Arial, Helvetica, sans-serif;">
+										<img src="https://milkyway24.github.io/test.github.io/img-mail/painter-1.jpg" class="painters__img" alt="Картина Гогена" />
+										<h3 class="painters__subtitle">Поль Гоген</h3>
+										<p class="painters__descr">
+											Прежде всего, разбавленное изрядной долей эмпатии, рациональное мышление в значительной степени обусловливает
+											важность укрепления моральных ценностей.
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table cellpadding="0" cellspacing="0" class="painters__item">
+								<tr>
+									<td style="font-family: Arial, Helvetica, sans-serif;">
+										<img src="https://milkyway24.github.io/test.github.io/img-mail/painter-2.jpg" class="painters__img" alt="Картина Ренуара" />
+										<h3 class="painters__subtitle">Огюст Ренуар</h3>
+										<p class="painters__descr">
+											А также сделанные на базе интернет-аналитики выводы освещают чрезвычайно интересные особенности картины в
+											целом.
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table cellpadding="0" cellspacing="0" class="painters__item">
+								<tr>
+									<td style="font-family: Arial, Helvetica, sans-serif;">
+										<img src="https://milkyway24.github.io/test.github.io/img-mail/painter-3.jpg" class="painters__img" alt="Картина Моне" />
+										<h3 class="painters__subtitle">Клод Моне</h3>
+										<p class="painters__descr">
+											Современная методология разработки однозначно фиксирует необходимость системы массового участия.
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table cellpadding="0" cellspacing="0" class="painters__item">
+								<tr>
+									<td style="font-family: Arial, Helvetica, sans-serif;">
+										<img src="https://milkyway24.github.io/test.github.io/img-mail/painter-4.jpg" class="painters__img" alt="Картина Мане" />
+										<h3 class="painters__subtitle">Эдуард Мане</h3>
+										<p class="painters__descr">
+											Но социально-экономическое развитие является качественно новой ступенью вывода текущих активов.
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table cellpadding="0" cellspacing="0" class="painters__item">
+								<tr>
+									<td style="font-family: Arial, Helvetica, sans-serif;">
+										<img src="https://milkyway24.github.io/test.github.io/img-mail/painter-5.jpg" class="painters__img" alt="Картина ван Гога" />
+										<h3 class="painters__subtitle">Винсент Ван Гог</h3>
+										<p class="painters__descr">
+											Повседневная практика показывает, что разбавленное изрядной долей эмпатии, рациональное мышление требует
+											анализа поставленных обществом задач.
+										</p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="more" bgcolor="#ffffff" style="font-family: Arial, Helvetica, sans-serif;">
+							<h2 class="more__title">И это ещё не всё!</h2>
+							<table cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td class="more__item" style="font-family: Arial, Helvetica, sans-serif;">
+										<img src="https://milkyway24.github.io/test.github.io/img-mail/check.png" alt="" />
+										<p class="more__descr">
+											Уникальные подборки <br /> работ с авторскими <br /> рецензиями
+										</p>
+									</td>
+									<td class="more__item" style="font-family: Arial, Helvetica, sans-serif;">
+										<img src="https://milkyway24.github.io/test.github.io/img-mail/calendar.png" alt="" />
+										<p class="more__descr">
+											Возможность настроить <br /> нашу рассылку под свой <br /> личный вкус
+										</p>
+									</td>
+									<td class="more__item" style="font-family: Arial, Helvetica, sans-serif;">
+										<img src="https://milkyway24.github.io/test.github.io/img-mail/arrow.png" alt="" />
+										<p class="more__descr">
+											У вас есть пожелания <br /> и предложения? <br />
+											Напишите нам в ответ <br /> на это письмо!
+										</p>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="#ffffff" class="more-td" align="center" style="font-family: Arial, Helvetica, sans-serif;">
+							<table cellpadding="0" cellspacing="0" width="240">
+								<tbody>
+									<tr>
+										<td align="center" class="link-td" valign="middle">
+											<a href="#" target="_blank">Узнать все подробности</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="footer" align="center" bgcolor="#000000" style="font-family: Arial, Helvetica, sans-serif;">
+							<table cellpadding="0" cellspacing="0" width="160">
+								<tr>
+									<td align="center">
+										<a href="#" target="_blank">
+											<img src="https://milkyway24.github.io/test.github.io/img-mail/vk.png" alt="Вконтакте" />
+										</a>
+									</td>
+									<td align="center">
+										<a href="#" target="_blank">
+											<img src="https://milkyway24.github.io/test.github.io/img-mail/insta.png" alt="Инстаграм" />
+										</a>
+									</td>
+									<td align="center">
+										<a href="#" target="_blank">
+											<img src="https://milkyway24.github.io/test.github.io/img-mail/fb.png" alt="Фейсбук" />
+										</a>
+									</td>
+								</tr>
+							</table>
+							<p class="footer__copy">Blanchard © 2020 / Все права защищены</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="footer-2" align="center" valign="middle" bgcolor="#ebebeb"
+							style="font-family: Arial, Helvetica, sans-serif;">
+							Вы можете так же <a href="#">отписаться от рассылки</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
 </body>
 
 </html>
