@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVGSPRITES</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <h2 class="header__title">Как это работает?</h2>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container">
+      <ul class="main__list list-reset flex">
+        <li class="main__items">
+          <svg class="main__svg">
+            <use xlink:href="sprite.svg#morningcoffee"></use>
+          </svg>
+          <h3 class="main__title">Утренний <span class="main__titlespan">кофе</span></h3>
+          <p class="main__text">Кофеин воздействует на центральную нервную систему как природный “будильник”. Поэтому мы
+            быстрее просыпаемся.</p>
+        </li>
+        <li class="main__items">
+          <svg class="main__svg">
+            <use xlink:href="sprite.svg#meditation"></use>
+          </svg>
+          <h3 class="main__title">Час <span class="main__titlespan">медитации</span></h3>
+          <p class="main__text">После практик оба полушария мозга начинают работать сбалансированно — это привносит
+            порядок в вашу жизнь.</p>
+        </li>
+        <li class="main__items" onClick="console.log(123)">
+          <svg class="main__svg">
+            <use xlink:href="sprite.svg#straight"></use>
+          </svg>
+          <h3 class="main__title">Вперёд к <span class="main__titlespan">свершениям</span></h3>
+          <p class="main__text">Ресурсы каждого человека ограничены, поэтому нам необходимо беречь себя и вовремя
+            останавливаться.</p>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer__container flex">
+      <div class="footer__textbox">
+        <h1 class="footer__title">Интеграция со сторонними сервисами</h1>
+        <p class="footer__text">Поможет всегда оставаться в курсе всех событий, быть максимально эффективным на
+          протяжении
+          всего рабочего дня, контролировать свои задачи и не опоздать на запланированные встречи.</p>
+      </div>
+      <div class="footer__svgbox">
+        <div class="footer__firstsvgbox">
+          <svg class="footer__svg">
+            <use xlink:href="sprite.svg#facebook"></use>
+          </svg>
+          <svg class="footer__svg">
+            <use xlink:href="sprite.svg#subtract"></use>
+          </svg>
+          <svg class="footer__svg">
+            <use xlink:href="sprite.svg#worklio"></use>
+          </svg>
+          <svg class="footer__svg">
+            <use xlink:href="sprite.svg#dropbox"></use>
+          </svg>
+        </div>
+        <div class="footer__secondsvgbox">
+          <svg class="footer__svg">
+            <use xlink:href="sprite.svg#googlelogo"></use>
+          </svg>
+          <svg class="footer__svg">
+            <use xlink:href="sprite.svg#subtractfirst"></use>
+          </svg>
+          <svg class="footer__svg">
+            <use xlink:href="sprite.svg#slacklogo"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="footer__background">
+        <svg class="footer__svgbackground">
+          <use xlink:href="sprite.svg#backgroundframe"></use>
+        </svg>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
