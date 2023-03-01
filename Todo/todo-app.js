@@ -51,10 +51,8 @@
     return list
   }
 
-  function createTodoItem(todoItemDate, itemsArray) {
+  function createTodoItem(todoItemDate, localStorKey) {
     let item = document.createElement('li')
-    let id = 1
-
     let buttonGroup = document.createElement('div')
     let doneButton = document.createElement('button')
     let deleteButton = document.createElement('button')
@@ -75,12 +73,26 @@
     if (todoItemDate.done) {
       item.classList.add('list-group-item-success')
     }
-    if (itemsArray.length > 0) {
-      id = itemsArray[itemsArray.length - 1].id + 1
-      itemsArray.push({ id, name: todoItemDate.name, done: todoItemDate.done })
-    } else {
-      itemsArray.push({ id, name: todoItemDate.name, done: todoItemDate.done })
-    }
+
+    doneButton.addEventListener('click', function () {
+      let todoThisItem = this.parentElement.parentElement
+      todoThisItem.classList.toggle('list-group-item-success')
+      if (todoThisItem.classList.contains('list-group-item-success')) {
+        itemsArray.find(el => el.name === todoThisItem.innerHTML.replace(/<.*/, '')).done = true
+      } else {
+        itemsArray.find(el => el.name === todoThisItem.innerHTML.replace(/<.*/, '')).done = false
+      }
+    });
+
+    deleteButton.addEventListener('click', function () {
+      let todoThisItem = this.parentElement.parentElement
+      if (confirm('Вы уверены?')) {
+        todoThisItem.remove()
+        itemsArray = itemsArray.filter(el => el.name !== todoThisItem.innerHTML.replace(/<.*/, ''))
+        localStorage.removeItem('my' || 'mom' || 'dad')
+        localStorage.setItem(localStorKey, JSON.stringify(itemsArray))
+      }
+    })
 
     return {
       item,
@@ -89,11 +101,12 @@
     }
   }
 
-  function createTodoApp(container, title = 'Список дел') {
-
+  function createTodoApp(container, title = 'Список дел', listName) {
+    let localStorKey = listName
     let todoAppTitle = createAppTitle(title)
     let todoItemForm = createTodoItemForm()
     let todoList = createTodoList()
+    let storedItems = localStorage.getItem(localStorKey)
 
     container.append(todoAppTitle)
     container.append(todoItemForm.form)
@@ -101,32 +114,30 @@
 
     todoItemForm.form.addEventListener('submit', function (e) {
       e.preventDefault();
-
-      if (!todoItemForm.input.value) {
-        return
-      }
-
-      let todoItem = createTodoItem({ name: todoItemForm.input.value, done: false }, itemsArray)
-      todoItem.doneButton.addEventListener('click', function () {
-        todoItem.item.classList.toggle('list-group-item-success')
-        if (this.parentElement.parentElement.classList.contains('list-group-item-success')) {
-          itemsArray.find(el => el.name === this.parentElement.parentElement.innerHTML.replace(/<.*/, '')).done = true
-        } else {
-          itemsArray.find(el => el.name === this.parentElement.parentElement.innerHTML.replace(/<.*/, '')).done = false
-        }
-      });
-      todoItem.deleteButton.addEventListener('click', function () {
-        if (confirm('Вы уверены?')) {
-          todoItem.item.remove()
-          itemsArray = itemsArray.filter(el => el.name !== this.parentElement.parentElement.innerHTML.replace(/<.*/, ''))
-        }
-      })
-
+      let id = 1
+      let textInInput = todoItemForm.input.value
+      let todoItem = createTodoItem({ name: textInInput, done: false }, localStorKey)
       todoList.append(todoItem.item)
-
-      todoItemForm.input.value = ''
+      this.reset()
       document.querySelector('.btn-primary').setAttribute('disabled', 'disabled')
+
+      if (itemsArray.length > 0) {
+        id = itemsArray[itemsArray.length - 1].id + 1
+        itemsArray.push({ id, name: textInInput, done: false })
+        localStorage.setItem(localStorKey, JSON.stringify(itemsArray))
+      } else {
+        itemsArray.push({ id, name: textInInput, done: false })
+        localStorage.setItem(localStorKey, JSON.stringify(itemsArray))
+      }
     })
+
+    if (storedItems) {
+      itemsArray = JSON.parse(storedItems)
+      itemsArray.forEach(el => {
+        let todoItem = createTodoItem(el, itemsArray)
+        todoList.append(todoItem.item)
+      })
+    }
   }
 
   window.createTodoApp = createTodoApp;
