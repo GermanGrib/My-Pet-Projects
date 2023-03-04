@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра в пары</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <div class="game__tablenumbers">
+        <ul class="game__numberlist list-reset flex">
+            <li class="game__numberitems">2</li>
+            <li class="game__numberitems">4</li>
+            <li class="game__numberitems">6</li>
+            <li class="game__numberitems">8</li>
+            <li class="game__numberitems">10</li>
+        </ul>
+        <div class="game__textrules">Выберите размер игрового поля</div>
+    </div>
+    <div class="timer__box">
+        <div class="timer">00:00:60</div>
+        <button class="game__btn btn" type="button">Старт</button>
+    </div>
+    <div class="container game">
+        <div class="game__table">
+            <ul class="game__cards list-reset flex">
+                <li class="game__card">1</li>
+                <li class="game__card">1</li>
+                <li class="game__card">2</li>
+                <li class="game__card">2</li>
+                <li class="game__card">3</li>
+                <li class="game__card">3</li>
+                <li class="game__card">4</li>
+                <li class="game__card">4</li>
+            </ul>
+        </div>
+    </div>
+    <div class="game__end end flex">
+        <div class="end__message"></div>
+        <button class="btn end__btn">Начать игру с начала</button>
+    </div>
+</body>
+
+</html>

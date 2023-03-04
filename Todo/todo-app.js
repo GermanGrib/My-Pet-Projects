@@ -79,8 +79,6 @@
       todoThisItem.classList.toggle('list-group-item-success')
       if (todoThisItem.classList.contains('list-group-item-success')) {
         itemsArray.find(el => el.id === todoItemDate.id).done = true
-        console.log(itemsArray, 'IM HERE')
-        console.log(localStorKey)
         localStorage.removeItem(localStorKey)
         saveListLocStor(itemsArray, localStorKey)
       } else {
@@ -97,8 +95,6 @@
         todoThisItem.remove()
         itemsArray = itemsArray.filter(el => (el.id !== todoItemDate.id))
         localStorage.removeItem(localStorKey)
-        console.log(itemsArray, 'HERE IS A PROBLEM')
-        console.log(localStorKey, 'HERE IS A KEY')
         saveListLocStor(itemsArray, localStorKey)
       }
     })
@@ -115,7 +111,6 @@
   }
 
   function createTodoApp(container, title = 'Список дел', listName) {
-    console.log(listName, 'IM LIST NAME')
     let localStorKey = listName
     let todoAppTitle = createAppTitle(title)
     let todoItemForm = createTodoItemForm()
